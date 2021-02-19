@@ -3,14 +3,43 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path" : "pages/cochain/cochain",
+			"style" :{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/community/community",
+			"style" : {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/discover/discover",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/my/my",
+			"style" : {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		}
+		
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#140C1C",
+		"backgroundColor": "#140C1C"
 	}
 }

@@ -1,5 +1,5 @@
 {
-    "name" : "cbo_uni",
+    "name" : "DPro",
     "appid" : "__UNI__C0E8F9F",
     "description" : "cbo_uni",
     "versionName" : "1.0.0",
@@ -67,5 +67,22 @@
     },
     "uniStatistics" : {
         "enable" : false
-    }
+    },
+		"h5": {
+			"devServer": {
+				"port": "8080",
+				"disableHostCheck" : false,
+				"proxy" : {
+					"/api" : {
+						"target" : "http://192.168.2.42:14001", //目标接口域名
+						"changeOrigin" : true, //是否跨域
+						"secure" : false ,// 设置支持https协议的代理,
+						"pathRewrite": {
+							"^/api": "/"
+						}
+					}
+				},
+				"https" : false
+			}
+		}
 }
