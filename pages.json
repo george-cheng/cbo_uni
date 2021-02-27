@@ -32,11 +32,63 @@
 		{
 			"path" : "pages/my/my",
 			"style" : {
-				"navigationBarTitleText": "",
+					"app-plus": {
+						"titleNView": false
+					}
+			}
+		},
+		{
+			"path" : "pages/loginIn/loginIn",
+			"style" :{
+				"app-plus": {//app平台
+						"bounce": "none"//禁止滚动
+					},
+				"navigationBarTitleText": "登录",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/loginIn/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/sundry/serviceAgreement",
+			"style":{
+				"navigationBarTitleText": "用户注册及隐私协议",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
 		}
-		
 	],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#140C1C",

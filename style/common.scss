@@ -1,4 +1,26 @@
 /* 全局公共scss */
 
 .mainBox{
+	
+}
+.mainTop{
+	padding-top: 88rpx;
+}
+
+.uniBtn{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 600rpx;
+	height: 80rpx;
+	color: #fff;
+	border-radius: 6rpx;
+	background-color: #FA2228;
+}
+input{
+	
 }

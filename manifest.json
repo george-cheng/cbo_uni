@@ -17,7 +17,9 @@
             "delay" : 0
         },
         /* 模块配置 */
-        "modules" : {},
+        "modules" : {
+            "VideoPlayer" : {}
+        },
         /* 应用发布信息 */
         "distribute" : {
             /* android打包配置 */
@@ -38,12 +40,15 @@
                     "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-feature android:name=\"android.hardware.camera\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ]
+                ],
+                "abiFilters" : [ "armeabi-v7a", "x86" ]
             },
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "ad" : {}
+            }
         }
     },
     /* 快应用特有相关 */
@@ -68,21 +73,21 @@
     "uniStatistics" : {
         "enable" : false
     },
-		"h5": {
-			"devServer": {
-				"port": "8080",
-				"disableHostCheck" : false,
-				"proxy" : {
-					"/api" : {
-						"target" : "http://192.168.2.42:14001", //目标接口域名
-						"changeOrigin" : true, //是否跨域
-						"secure" : false ,// 设置支持https协议的代理,
-						"pathRewrite": {
-							"^/api": "/"
-						}
-					}
-				},
-				"https" : false
-			}
-		}
+    "h5" : {
+        "devServer" : {
+            "port" : "8080",
+            "disableHostCheck" : false,
+            "proxy" : {
+                "/api" : {
+                    "target" : "http://192.168.2.42:14001", //目标接口域名
+                    "changeOrigin" : true, //是否跨域
+                    "secure" : false, // 设置支持https协议的代理,
+                    "pathRewrite" : {
+                        "^/api" : "/"
+                    }
+                }
+            },
+            "https" : false
+        }
+    }
 }

@@ -64,11 +64,15 @@ AjaxRequest.prototype.init = function(options){
   return true;
 }
 
-requestInstance.interceptors.request.use(function (config) {
+$axios.defaults.withCredentials = true;
+$axios.defaults.crossDomain = true;
+requestInstance.interceptors.request.use((config)=> {
+    config.headers = {'Content-Type':'application/x-www-form-urlencoded'}
+
 	// 　　　config.headers['Access-Control-Allow-Origin']="http://192.168.2.42";
 	// 　　　config.headers['Access-Control-Allow-Methods']="GET, POST, PUT, DELETE, OPTIONS";
 	// 　　　config.headers['Access-Control-Allow-Credentials']="true";
-	// 　　　config.headers['Access-Control-Allow-Headers']="Authorization";
+	// 　　　config.headers['Authorizationxxx1']="xxx";
 
 			return config;
 },function (error) {
@@ -81,55 +85,110 @@ requestInstance.interceptors.response.use(function (response) {
   }else{
   }
 },function (error) {
+	
 })
-
-let header
-header= {
-	"Content-Type": 'application/json',
-}
 
 AjaxRequest.prototype.request = function () {
   var ajaxRequest = this;
+	let getAuthorization = uni.getStorageSync('Authorization')
 	return new Promise((resolve, reject)=>{
-		$axios({
-			url: BASE_URL + this.url,
-			data: this.data,
-			method: this.method,
-		}).then((res)=>{
-			if(res.status == 200){
-				if(res.data.code == 500){
-					uni.showToast({
-						icon: 'none',
-						title: '错误',
-						success: () => {}
+		if(this.method == 'GET'){
+			this.data = qs.stringify(this.data)
+			uni.request({
+						url: BASE_URL + this.url + '?' + this.data,
+						method: this.method,
+						header: { Authorization: 'Bearer '+ getAuthorization },
+						success: (res) => {
+							if(res.statusCode == 200){
+								if(res.data.code == 500){
+									uni.showToast({
+										icon: 'none',
+										title: '错误',
+										success: () => {}
+									})
+								}else if(res.data.code == 3002){
+									uni.showToast({
+										icon: 'none',
+										title: '权限不足,去登录',
+										success: () => {}
+									})
+									setTimeout(()=>{
+										uni.reLaunch({
+											url: '/pages/loginIn/loginIn',
+											success: ()=>{}
+										})
+									},500)
+								}else if(res.data.code == 3001){
+									uni.showToast({
+										icon: 'none',
+										title: '重复操作',
+										success: () => {}
+									})
+								}else{
+									if(ajaxRequest.successCall){
+										ajaxRequest.successCall(res.data)
+									}
+								}
+							}else{
+								uni.showToast({
+									icon: 'none',
+									title: '状态码为：' + JSON.stringify(res.statusCode),
+									success: () => {}
+								})
+							}
+						},
+						fail: (res) => {
+							reject(res)
+						}
 					})
-				}else if(res.data.code == 3002){
-					uni.showToast({
-						icon: 'none',
-						title: '权限不足,去登录',
-						success: () => {}
-					})
-				}else if(res.data.code == 3001){
-					uni.showToast({
-						icon: 'none',
-						title: '重复操作',
-						success: () => {}
-					})
-				}else{
-					if(ajaxRequest.successCall){
-						ajaxRequest.successCall(res.data)
+		}else{
+			$axios({
+				url: BASE_URL + this.url,
+				data: this.data,
+				method: this.method,
+				headers: { Authorization: 'Bearer '+ getAuthorization },
+			}).then((res)=>{
+				if(res.status == 200){
+					if(res.data.code == 500){
+						uni.showToast({
+							icon: 'none',
+							title: '错误',
+							success: () => {}
+						})
+					}else if(res.data.code == 3002){
+						uni.showToast({
+							icon: 'none',
+							title: '权限不足,去登录',
+							success: () => {}
+						})
+						setTimeout(()=>{
+							uni.reLaunch({
+								url: '/pages/loginIn/loginIn',
+								success: ()=>{}
+							})
+						},500)
+					}else if(res.data.code == 3001){
+						uni.showToast({
+							icon: 'none',
+							title: '重复操作',
+							success: () => {}
+						})
+					}else{
+						if(ajaxRequest.successCall){
+							ajaxRequest.successCall(res.data)
+						}
 					}
+				}else{
+					uni.showToast({
+						icon: 'none',
+						title: '状态码为：' + JSON.stringify(res.status),
+						success: () => {}
+					})
 				}
-			}else{
-				uni.showToast({
-					icon: 'none',
-					title: '状态码为：' + JSON.stringify(res.status),
-					success: () => {}
-				})
-			}
-		}).catch(err=>{
-			reject(err)
-		})
+			}).catch(err=>{
+				reject(err)
+			})
+		}
 	})
 	
 	

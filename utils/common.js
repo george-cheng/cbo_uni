@@ -1,3 +1,15 @@
+function checkPhone(phone){
+	return RegExp(/^1[23456789]\d{9}$/).test(phone);
+}
+
+function checkPwd(pwd){
+	return RegExp(/^[0-9A-Za-z.@-_!#$%^&*~+-/]{8,16}$/).test(pwd)
+}
+
+function checkNum(num){
+	return RegExp(/^\d{6}$/).test(num)
+}
+
 //乘法
 function accMul (arg1, arg2) {
   var m = 0, s1 = arg1 + "", s2 = arg2 + "";
@@ -19,5 +31,5 @@ function accAdd(arg1, arg2) {
 
 
 export{
-	accMul, accAdd
+	accMul, accAdd, checkPhone, checkPwd, checkNum
 }

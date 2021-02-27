@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* 左箭头 */
+.i-lftArrow::before{
+	font-family: 'icomoon' !important;
+	content: "\e900";
+}
+
+/* 右箭头 */
+.i-rgtArrow::before{
+	font-family: 'icomoon' !important;
+	content: "\e901";
+}
+
+/* 警告 */
+.i-warn::before{
+	font-family: 'icomoon' !important;
+	content: "\e902";
+}
+/* 下实箭头 */
+.i-downArrow::before{
+	font-family: 'icomoon' !important;
+	content: "\e904";
+}
+/* 眼睛 */
+.i-eye::before{
+	font-family: 'icomoon' !important;
+	content: "\e905";
+}
+
+/* 未选中 */
+.i-check::before{
+	font-family: 'icomoon' !important;
+	content: "\e903";
+}
+/* 已选中 */
+.i-checked::before{
+	font-family: 'icomoon' !important;
+	content: "\e906";
+}

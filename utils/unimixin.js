@@ -3,15 +3,19 @@ import { accMul, accAdd } from './common.js'
 const unimixin = {
 	data(){
 		return{
+			imgUrl: 'https://cbo-community.oss-cn-hongkong.aliyuncs.com/',
 			paddingTop: 0,
 			screenHeight: 0,
+			screenH: 0,
+			statusBarHeight: '',
 		}
 	},
 	onLoad(){
 		uni.getSystemInfo({
 			success: (res) => {
-				console.log(res)
 				this.screenHeight = res.screenHeight
+				this.screenH = res.screenHeight - 112
+				this.statusBarHeight = res.statusBarHeight
 			}
 		})
 	},
@@ -31,7 +35,7 @@ const unimixin = {
 		}
 	},
 	created(){
-		
+
 	}
 }
 
