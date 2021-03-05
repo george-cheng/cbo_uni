@@ -3,11 +3,14 @@ import { accMul, accAdd } from './common.js'
 const unimixin = {
 	data(){
 		return{
-			imgUrl: 'https://cbo-community.oss-cn-hongkong.aliyuncs.com/',
+			page: '',
+			limit: '',
 			paddingTop: 0,
 			screenHeight: 0,
 			screenH: 0,
+			cnyRate: 6.5,
 			statusBarHeight: '',
+			imgUrl: 'https://cbo-community.oss-cn-hongkong.aliyuncs.com/',
 		}
 	},
 	onLoad(){

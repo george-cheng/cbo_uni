@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import App from './App'
 
-import { AjaxJson } from './utils/request.js'
+import { AjaxJson, UploadRequest} from './utils/request.js'
 import { accMul, accAdd } from 'utils/common.js'
 
 Vue.prototype.ajaxJson = AjaxJson
+Vue.prototype.ajaxUpload = UploadRequest
 
 Vue.prototype.accMul = accMul
 Vue.prototype.accAdd = accAdd

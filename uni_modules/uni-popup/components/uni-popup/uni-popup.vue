@@ -173,7 +173,7 @@
 				})
 			},
 			onTap() {
-				if (!this.mkclick) return
+				// if (!this.mkclick) return
 				this.close()
 			},
 			/**

@@ -48,8 +48,8 @@
 		data(){
 			return{
 				areaCode: '86',
-				phone: '',
-				loginPwd: '',
+				phone: '17621722875',
+				loginPwd: '123456789a',
 				validCode: '',
 				Authorization: '',
 				isPassword: true,

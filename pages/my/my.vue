@@ -24,7 +24,6 @@
 				this.ajaxJson({
 					url: '/summary/userInfo/refresh',
 					call: (res)=>{
-						console.log(res.data)
 					}
 				})
 			}

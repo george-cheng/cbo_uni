@@ -94,53 +94,59 @@ AjaxRequest.prototype.request = function () {
 	return new Promise((resolve, reject)=>{
 		if(this.method == 'GET'){
 			this.data = qs.stringify(this.data)
+			let url;
+			if(this.data == ''){
+				url = BASE_URL + this.url
+			}else{
+				url = BASE_URL + this.url + '?' + this.data
+			}
 			uni.request({
-						url: BASE_URL + this.url + '?' + this.data,
-						method: this.method,
-						header: { Authorization: 'Bearer '+ getAuthorization },
-						success: (res) => {
-							if(res.statusCode == 200){
-								if(res.data.code == 500){
-									uni.showToast({
-										icon: 'none',
-										title: '错误',
-										success: () => {}
-									})
-								}else if(res.data.code == 3002){
-									uni.showToast({
-										icon: 'none',
-										title: '权限不足,去登录',
-										success: () => {}
-									})
-									setTimeout(()=>{
-										uni.reLaunch({
-											url: '/pages/loginIn/loginIn',
-											success: ()=>{}
-										})
-									},500)
-								}else if(res.data.code == 3001){
-									uni.showToast({
-										icon: 'none',
-										title: '重复操作',
-										success: () => {}
-									})
-								}else{
-									if(ajaxRequest.successCall){
-										ajaxRequest.successCall(res.data)
-									}
-								}
-							}else{
-								uni.showToast({
-									icon: 'none',
-									title: '状态码为：' + JSON.stringify(res.statusCode),
-									success: () => {}
+				url: url,
+				method: this.method,
+				header: { Authorization: 'Bearer '+ getAuthorization },
+				success: (res) => {
+					if(res.statusCode == 200){
+						if(res.data.code == 500){
+							uni.showToast({
+								icon: 'none',
+								title: '错误',
+								success: () => {}
+							})
+						}else if(res.data.code == 3002){
+							uni.showToast({
+								icon: 'none',
+								title: '权限不足,去登录',
+								success: () => {}
+							})
+							setTimeout(()=>{
+								uni.reLaunch({
+									url: '/pages/loginIn/loginIn',
+									success: ()=>{}
 								})
+							},500)
+						}else if(res.data.code == 3001){
+							uni.showToast({
+								icon: 'none',
+								title: '重复操作',
+								success: () => {}
+							})
+						}else{
+							if(ajaxRequest.successCall){
+								ajaxRequest.successCall(res.data)
 							}
-						},
-						fail: (res) => {
-							reject(res)
 						}
-					})
+					}else{
+						uni.showToast({
+							icon: 'none',
+							title: '状态码为：' + JSON.stringify(res.statusCode),
+							success: () => {}
+						})
+					}
+				},
+				fail: (res) => {
+					reject(res)
+				}
+			})
 		}else{
 			$axios({
 				url: BASE_URL + this.url,
@@ -190,29 +196,56 @@ AjaxRequest.prototype.request = function () {
 			})
 		}
 	})
-	
-	
-	
 }
 
 AjaxRequest.prototype.uploadrequest = function(){
 	var ajaxRequest = this;
+	let getAuthorization = uni.getStorageSync('Authorization')
 	return new Promise((resolve, reject) => {
 		uni.uploadFile({
 			url: BASE_URL + this.url,
 			filePath: this.filePath,
 			name: this.name,
 			formData: this.formData,
+			header: { Authorization: 'Bearer '+ getAuthorization },
 			success: (res) =>{
-				if(ajaxRequest.successCall){
-					if(res.data.code == 401){
-						uni.navigateTo({
-							url: '/pages/loginIn/loginIn'
+				if(res.statusCode == 200){
+					let result = JSON.parse(res.data)
+					if(result.code == 500){
+						uni.showToast({
+							icon: 'none',
+							title: '错误',
+							success: () => {}
 						})
+					}else if(result.code == 3002){
+						uni.showToast({
+							icon: 'none',
+							title: '权限不足,去登录',
+							success: () => {}
+						})
+						setTimeout(()=>{
+							uni.reLaunch({
+								url: '/pages/loginIn/loginIn',
+								success: ()=>{}
+							})
+						},500)
+					}else if(result.code == 3001){
+						uni.showToast({
+							icon: 'none',
+							title: '重复操作',
+							success: () => {}
+						})
+					}else{
+						if(ajaxRequest.successCall){
+							ajaxRequest.successCall(result)
+						}
 					}
-					if(res.data.code == 200 || res.dataMap || res.data || res){
-						ajaxRequest.successCall(res.data)
-					}
+				}else{
+					uni.showToast({
+						icon: 'none',
+						title: '状态码为：' + JSON.stringify(res.statusCode),
+						success: () => {}
+					})
 				}
 			},
 			fail: (res) => {
@@ -220,7 +253,6 @@ AjaxRequest.prototype.uploadrequest = function(){
 			}
 		})
 	})
-	
 }
 
 export { 

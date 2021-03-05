@@ -6,7 +6,7 @@
 		<view class="uni-dialog-content">
 			<slot></slot>
 		</view>
-		<view class="uni-dialog-button-group">
+		<view class="uni-dialog-button-group" v-if="isBtn">
 			<view class="uni-dialog-button" @click="close">
 				<text class="uni-dialog-button-text">取消</text>
 			</view>
@@ -76,6 +76,10 @@
 			mode: {
 				type: String,
 				default: 'base'
+			},
+			isBtn: {
+				type: Boolean,
+				default: true
 			},
 			/**
 			 * 对话框标题

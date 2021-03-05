@@ -18,7 +18,8 @@
         },
         /* 模块配置 */
         "modules" : {
-            "VideoPlayer" : {}
+            "VideoPlayer" : {},
+            "Maps" : {}
         },
         /* 应用发布信息 */
         "distribute" : {
@@ -47,7 +48,13 @@
             "ios" : {},
             /* SDK配置 */
             "sdkConfigs" : {
-                "ad" : {}
+                "ad" : {},
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "cae0dba5f0311d671b3b8fe8f020d0c3",
+                        "appkey_android" : "e5095358c5877f059d5e6a1703796e39"
+                    }
+                }
             }
         }
     },
