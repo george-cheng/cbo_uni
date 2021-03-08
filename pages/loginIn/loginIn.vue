@@ -1,5 +1,5 @@
 <template>
-	<view class="loginIn mainBox" :style="{height: screenH + 'px'}">
+	<view class="loginIn mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="loginLogo">
 			<image src="../../static/logo.jpg" mode="aspectFit"></image>
 		</view>
@@ -17,9 +17,8 @@
 		</view>
 		<view class="loginBtn uniBtn" @click="loginEvent()">登录</view>
 		
-		<view class="forgetPwd">忘记密码？</view>
+		<view class="forgetPwd" @click="forgetPwdEvent()">忘记密码？</view>
 		<view class="register" @click="registerEvent()">还没有账号，去注册</view>
-		
 		
 		<uni-popup ref="popup" type="dialog">
 			<uni-popup-dialog title="请输入短信验证码" :duration='2000' @confirm="loginComfirm()">
@@ -64,6 +63,11 @@
 		},
 		
 		methods: {
+			touchEnd(e){
+				if(this.changeY > 50){
+					this.paddingTop = 0
+				}
+			},
 			loginEvent(){
 				let params = {
 					areaCode: this.areaCode,
@@ -85,12 +89,19 @@
 							}else if(data.code == 200){
 								this.Authorization = data.data.token
 								uni.setStorageSync('Authorization', this.Authorization)
-
 								uni.showToast({
 									icon: 'none',
 									title: '登陆成功',
 									success: () => {}
 								})
+								
+								uni.setStorage({
+									key: 'userInfo',
+									data: data.data.userInfo,
+									success: () => {}
+								})
+								
+								uni.setStorageSync('phone', this.phone)
 								setTimeout(()=>{
 									uni.reLaunch({
 										url: '/pages/my/my',
@@ -196,9 +207,16 @@
 				if(this.loginPwd){
 					this.isPassword = !this.isPassword
 				}
+			},
+			forgetPwdEvent(){
+				uni.reLaunch({
+					url: '/pages/loginIn/forgetPwd',
+					success: () => {}
+				})
 			}
 		},
 		created() {
+			this.phone = uni.getStorageSync('phone')
 		}
 	}
 </script>

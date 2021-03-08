@@ -31,6 +31,15 @@
 		
 		<view class="uniBtn" @click="submitEvent()">提交数据(需要{{cost}}DPC)</view>
 		
+		<uni-popup ref="popup" type="dialog">
+			<uni-popup-dialog title="请输入交易密码" @confirm="submitConfirmEvent()">
+				<view class="tranPwdArea">
+					<view class="tranPwdAreaTxt">交易密码：</view>
+					<input type="number" maxlength="6" v-model="tranPwd" />
+				</view>
+			</uni-popup-dialog>
+		</uni-popup>
+		
 	</view>
 </template>
 
@@ -39,8 +48,12 @@
 	import { unimixin } from '../../utils/unimixin.js'
 	import { accAdd, accMul } from '../../utils/common.js'
 	
+	import uniPopup from '../../uni_modules/uni-popup/components/uni-popup/uni-popup.vue'
+	import uniPopupDialog from '../../uni_modules/uni-popup/components/uni-popup-dialog/uni-popup-dialog.vue'
+	
 	export default {
 		mixins: [ unimixin ],
+		components: { uniPopup, uniPopupDialog },
 		data(){
 			return{
 				upLoadImgFile: '',
@@ -50,9 +63,11 @@
 				name: '',
 				link: '',
 				cost: '',
+				tranPwd: '',
 				appName: '交易所',
 				isUpload: true,
 				isAppType: false,
+				isValidator: false,
 				popularizeType: []
 			}
 		},
@@ -98,11 +113,8 @@
 							call: (data)=>{
 								this.logo = data.data
 								this.isUpload = false
-								console.log(data)
 							}
 						})
-						
-						console.log(this.upLoadImgFile)
 					}
 				});
 			},
@@ -125,6 +137,12 @@
 				})
 			},
 			submitEvent(){
+				this.validator()
+				if(this.isValidator){
+					this.$refs.popup.open()
+				}
+			},
+			submitConfirmEvent(){
 				let params = {
 					type: this.type || 1,
 					name: this.name,
@@ -132,15 +150,52 @@
 					logo: this.logo
 				}
 				this.ajaxJson({
-					url: '/summary/popularize/publish/' + '123456',
+					url: '/summary/popularize/publish/' + this.tranPwd,
 					data: params,
 					method: 'POST',
 					call: (data)=>{
-						console.log(data)
+						if(data.code == 200){
+							uni.showToast({
+								icon: 'none',
+								title: data.message,
+								success: () => {}
+							})
+						}
+						setTimeout(()=>{
+							uni.reLaunch({
+								url: '/pages/index/index',
+								success: () => {}
+							})
+						},500)
 					}
 				})
 			},
-			
+			validator(){
+				if(!this.logo){
+					uni.showToast({
+						icon: 'none',
+						title: '请上传图片',
+						success: () => {}
+					})
+				}else if(!this.name){
+					uni.showToast({
+						icon: 'none',
+						title: '请输入app名称',
+						success: () => {}
+					})
+				}else if(!this.link || this.link.indexOf('https' && 'http') == -1){
+					uni.showToast({
+						icon: 'none',
+						title: '请输入app完整链接或格式不正确',
+						success: () => {
+							this.link = ''
+						}
+					})
+				}
+				else{
+					this.isValidator = true
+				}
+			}
 		},
 		created() {
 			this.popularizeTypeEvent()
@@ -227,6 +282,17 @@
 					font-size: 26rpx;
 				}
 			}
+		}
+	}
+	.tranPwdArea{
+		display: flex;
+		.tranPwdAreaTxt{
+			
+		}
+		input{
+			width: 300rpx;
+			border: 1px solid #333;
+			text-indent: 0.2em;
 		}
 	}
 </style>

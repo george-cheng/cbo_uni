@@ -69,6 +69,27 @@
 			}
 		},
 		{
+			"path" : "pages/loginIn/forgetPwd",
+			"style" :{
+				"navigationBarTitleText": "忘记密码",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
 			"path" : "pages/sundry/serviceAgreement",
 			"style":{
 				"navigationBarTitleText": "用户注册及隐私协议",
@@ -135,6 +156,216 @@
 			"path" : "pages/sundry/popularizeAgreement",
 			"style" :{
 				"navigationBarTitleText": "上传app合同协议",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/person/personal",
+			"style" :{
+				"navigationBarTitleText": "个人资料",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/person/changeNickName",
+			"style" : {
+				"navigationBarTitleText": "更改昵称",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/person/changeSex",
+			"style" :{
+				"navigationBarTitleText": "更改性别",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/person/chengeSignature",
+			"style" :{
+				"navigationBarTitleText": "设置个性签名",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/person/changeArea",
+			"style" :{
+				"navigationBarTitleText": "设置地区",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/saveSetting/saveSetting",
+			"style" :{
+				"navigationBarTitleText": "安全设置",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/saveSetting/changeLoginPwd",
+			"style" :{
+				"navigationBarTitleText": "修改登录密码",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/saveSetting/payPassword/setPayPwd",
+			"style" :{
+				"navigationBarTitleText": "设置支付密码",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/saveSetting/payPassword/changePayPwd",
+			"style" :{
+				"navigationBarTitleText": "修改支付密码",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/my/saveSetting/payPassword/forgetPayPwd",
+			"style" : {
+				"navigationBarTitleText": "忘记支付密码",
 				"enablePullDownRefresh": false,
 				"app-plus": {
 					"titleNView": {

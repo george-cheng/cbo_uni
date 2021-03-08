@@ -38,3 +38,65 @@
 	font-family: 'icomoon' !important;
 	content: "\e906";
 }
+
+/* 安全 */
+.i-save::before{
+	font-family: 'icomoon' !important;
+	content: "\e907";
+}
+/* 添加 */
+.i-plus::before{
+	font-family: 'icomoon' !important;
+	content: "\e90e";
+}
+/* 分享收益 */
+.i-shareprofit::before{
+	font-family: 'icomoon' !important;
+	content: "\e908";
+}
+/* 复制 */
+.i-copy::before{
+	font-family: 'icomoon' !important;
+	content: "\e909";
+}
+/* 个人资料 */
+.i-personal::before{
+	font-family: 'icomoon' !important;
+	content: "\e90a";
+}
+/* 客服 */
+.i-service::before{
+	font-family: 'icomoon' !important;
+	content: "\e90b";
+}
+/* 我的资产 */
+.i-myassets::before{
+	font-family: 'icomoon' !important;
+	content: "\e90c";
+}
+/* 系统 */
+.i-system::before{
+	font-family: 'icomoon' !important;
+	content: "\e90d";
+}
+/* 推广 */
+.i-extension::before{
+	font-family: 'icomoon' !important;
+	content: "\e910";
+}
+/* 邀请好友 */
+.i-invita::before{
+	font-family: 'icomoon' !important;
+	content: "\e911";
+}
+/* 团队 */
+.i-team::before{
+	font-family: 'icomoon' !important;
+	content: "\e90f";
+}
+
+/* 对号 */
+.i-checksign::before{
+	font-family: 'icomoon' !important;
+	content: "\e912";
+}

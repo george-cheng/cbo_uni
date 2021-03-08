@@ -148,14 +148,25 @@ AjaxRequest.prototype.request = function () {
 				}
 			})
 		}else{
+			let header
+			if(this.formData == 'formData'){
+				this.data = qs.stringify(this.data)
+				header = {'Content-type': 'application/x-www-form-urlencoded', Authorization: 'Bearer '+ getAuthorization }
+			}else{
+				header = { Authorization: 'Bearer '+ getAuthorization }
+			}
 			$axios({
 				url: BASE_URL + this.url,
 				data: this.data,
 				method: this.method,
-				headers: { Authorization: 'Bearer '+ getAuthorization },
+				headers: header,
 			}).then((res)=>{
 				if(res.status == 200){
-					if(res.data.code == 500){
+					if(res.data.code == 200){
+						if(ajaxRequest.successCall){
+							ajaxRequest.successCall(res.data)
+						}
+					}else if(res.data.code == 500){
 						uni.showToast({
 							icon: 'none',
 							title: '错误',
@@ -180,9 +191,11 @@ AjaxRequest.prototype.request = function () {
 							success: () => {}
 						})
 					}else{
-						if(ajaxRequest.successCall){
-							ajaxRequest.successCall(res.data)
-						}
+						uni.showToast({
+							icon: 'none',
+							title: res.data.message,
+							success: () => {}
+						})
 					}
 				}else{
 					uni.showToast({
@@ -211,7 +224,11 @@ AjaxRequest.prototype.uploadrequest = function(){
 			success: (res) =>{
 				if(res.statusCode == 200){
 					let result = JSON.parse(res.data)
-					if(result.code == 500){
+					if(result.code == 200){
+						if(ajaxRequest.successCall){
+							ajaxRequest.successCall(result)
+						}
+					}else if(result.code == 500){
 						uni.showToast({
 							icon: 'none',
 							title: '错误',
@@ -236,9 +253,11 @@ AjaxRequest.prototype.uploadrequest = function(){
 							success: () => {}
 						})
 					}else{
-						if(ajaxRequest.successCall){
-							ajaxRequest.successCall(result)
-						}
+						uni.showToast({
+							icon: 'none',
+							title: result.message,
+							success: () => {}
+						})
 					}
 				}else{
 					uni.showToast({

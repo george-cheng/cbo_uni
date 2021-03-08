@@ -1,9 +1,9 @@
 <template>
 	<view class="home mainBox mainTop" :style="[{height: screenHeight + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		
-		<!-- <uniVideo class="uniVideo" :videoSrc = 'swiper'></uniVideo> -->
-		
-		<view style="height: 314rpx;"></view>
+		<view class="videoPlay" >
+			<video :src="imgUrl + swiper.file" loop objectFit="fill" controls></video>
+		</view>
 
 		<view class="market">
 			<view v-for="(item, index) in marketList" :key="index">
@@ -23,14 +23,10 @@
 			</view>
 		</view>
 		
-		
-		
 		<swiper class="popularizeSwiper" indicator-dots circular @change="swiperChange"  interval="3000" indicator-color="rgb(140,182,253)" indicator-active-color="#999">
 			<swiper-item v-for="(item, index) in popularizeNum" :key="index">
 				<view class="popularizeAreaList" >
 					<view class="popularizeAreaFlex" v-for="(item, index) in PopularizeTypeList" :key="index" @click="popularizeOpenLinkEvent(item)">
-						
-						
 						<view class="popularizeLogo">
 							<image :src="imgUrl + item.logo" mode="aspectFit"></image>
 						</view>
@@ -41,7 +37,7 @@
 					</view>
 					<view class="addPopularize" @click="addPopularizeEvent()">
 						<view class="popularizeLogo">
-							<image :src="imgUrl + item.logo" mode="aspectFit"></image>
+							<view class="addPopularizeIcon i-plus"></view>
 						</view>
 						<view class="popularizeBase">
 							<image src="../../static/base.png" mode="aspectFit"></image>
@@ -123,7 +119,7 @@
 				this.ajaxJson({
 					url: '/site/carousel',
 					call: (data)=>{
-						this.swiper = data.data.rows
+						this.swiper = data.data.rows[0]
 					}
 				})
 			},
@@ -187,7 +183,6 @@
 				let link = item.link
 				if(link.indexOf('https' && 'http') == -1){
 					link = 'https://' + link
-					console.log(1)
 				}
 				uni.reLaunch({
 					url: '/pages/index/openUrl?url=' + link,
@@ -218,15 +213,7 @@
 					success: () => {}
 				})
 			},
-			getCity(){
-				uni.getLocation({
-					type: 'gcj02',
-					geocode: true,//设置该参数为true可直接获取经纬度及城市信息
-					success: (res)=>{
-						console.log(res)
-					}
-				})
-			}
+			
 		},
 		created() {
 			this.initSwiper()
@@ -241,8 +228,30 @@
 </script>
 
 <style scoped lang="scss">
-	.uniVideo {
-		padding-top: 88rpx;
+	.addPopularize{
+		position: absolute;
+		width: 96rpx;
+		height: 93rpx;
+		margin: 0 auto;
+		.i-plus{
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin:  0 auto;
+		}
+	}
+	.i-plus::before{
+		color: #FF0000;
+	}
+	.videoPlay {
+		width: calc(100% - 60rpx);
+		padding-top: 44rpx;
+		height: 314rpx;
+		margin: 0 30rpx;
+		video{
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.market{
 		margin: 14rpx 30rpx 0;
@@ -306,12 +315,11 @@
 				background-color: #fa2228;
 			}
 		}
-		
 	}
 
 	.popularizeSwiper{
-		margin: 8rpx 50rpx 0;
-		height: 534rpx;
+		margin: 0 50rpx 0;
+		height: 600rpx;
 		.popularizeAreaList{
 			width: 100%;
 			display:flex;
@@ -324,9 +332,8 @@
 				text-align: center;
 				width: 96rpx;
 				height: 112rpx;
-				margin: 26rpx 60rpx;
+				margin: 36rpx 60rpx;
 				position: relative;
-				
 			}	
 		}
 	}
@@ -336,10 +343,10 @@
 		margin: 26rpx 60rpx 0;
 	}
 	.popularizeLogo{
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 8rpx;
 		width: 36rpx;
 		height: 36rpx;
 		margin: 0 auto;

@@ -1,5 +1,5 @@
 <template>
-	<view class="register mainBox">
+	<view class="register mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="registerTit">
 			<view class="phoneRetister">手机注册</view>
 			<view class="registerCountry">
@@ -67,6 +67,7 @@
 	import { unimixin } from '../../utils/unimixin.js'
 	
 	export default {
+		mixins: [ unimixin ],
 		data(){
 			return{
 				areaCode: '86',
@@ -95,6 +96,11 @@
 			}
 		},
 		methods: {
+			touchEnd(e){
+				if(this.changeY > 50){
+					this.paddingTop = 0
+				}
+			},
 			registerEvent(){
 				let params = {
 					areaCode: this.areaCode,
@@ -105,35 +111,25 @@
 				}
 				this.validator()
 				if(this.isValidator){
-					console.log(params)
 					
 					this.ajaxJson({
 						url: '/summary/userInfo/register',
 						data: params,
 						method: 'POST',
 						call: (data)=>{
-							if(data.code == 200){
-								uni.showToast({
-									icon: 'none',
-									title: data.message,
+							uni.showToast({
+								icon: 'none',
+								title: data.message,
+								success: () => {}
+							})
+							setTimeout(()=>{
+								uni.reLaunch({
+									url: '/pages/loginIn/loginIn',
 									success: () => {}
 								})
-								setTimeout(()=>{
-									uni.reLaunch({
-										url: '/pages/loginIn/loginIn',
-										success: () => {}
-									})
-								}, 500)
-							}else{
-								uni.showToast({
-									icon: 'none',
-									title: data.message,
-									success: () => {}
-								})
-							}
+							}, 500)
 						}
 					})
-					
 				}
 			},
 			validator(){
@@ -315,6 +311,7 @@
 	.register{
 		padding: 98rpx 48rpx 0 74rpx;
 		.registerTit{
+			padding-top: 48rpx;
 			color: #ccdaff;
 			display: flex;
 			justify-content: space-between;

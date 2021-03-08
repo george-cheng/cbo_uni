@@ -14,6 +14,54 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-uniE912:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-uniE907:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-3:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-5:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-6:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-7:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-8:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-9:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-10:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-11:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-12:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-13:before {
+  content: "\e911";
+  color: #fff;
+}
 .icon-uniE905:before {
   content: "\e905";
   color: #fff;

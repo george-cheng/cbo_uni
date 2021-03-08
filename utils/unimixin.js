@@ -17,7 +17,7 @@ const unimixin = {
 		uni.getSystemInfo({
 			success: (res) => {
 				this.screenHeight = res.screenHeight
-				this.screenH = res.screenHeight - 112
+				this.screenH = res.screenHeight - 60
 				this.statusBarHeight = res.statusBarHeight
 			}
 		})
