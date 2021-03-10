@@ -15,7 +15,7 @@
 		<view class="allLocation">
 			<view class="allLocationTit">全部地区</view>
 			<view class="allLocationArea">
-				<view v-for="(item, index) in cityList" @click="choiceCity(index)">
+				<view v-for="(item, index) in cityList" :key="index" @click="choiceCity(index)">
 					<view class="areaLft">{{item.provinceName}}</view>
 					<view class="areaRgt">
 						<view class="choiceArea"></view>

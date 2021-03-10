@@ -1,10 +1,10 @@
 <template>
-	<view class="changeLoginPwd mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
-		<view class="changePwd">
+	<view class="changeLoginPwd mainBox" id="scrollH" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+		<!-- <view class="changePwd">
 			<view class="phoneAreaIpt">
 				<input class="phoneIpt" type="text" v-model="phone" placeholder="请输入手机号">
 			</view>
-		</view>
+		</view> -->
 		<view class="phonePwdArea">
 			<view class="phonePwdAreaIpt registerIpt">
 				<input :password="isOldPwd" v-model="oldPwd" placeholder="请输入旧密码" />
@@ -151,12 +151,15 @@
 		color: #fa2228;
 		margin-top: 16rpx;
 	}
+	.phonePwdArea{
+		padding: 20rpx 0;
+	}
 	.phonePwdArea, .phoneComPwdArea{
 		position: relative;
 	}
 	.passwordEye{
 		position: absolute;
-		top: 30rpx;
+		top: 48rpx;
 		right: 20rpx;
 	}
 	.passwordEye::before{
@@ -173,7 +176,6 @@
 			}
 		}
 		input{
-			margin: 20rpx 0;
 			border: 1px solid #f2f2f2;
 			height: 85rpx;
 			border-radius: 12rpx;

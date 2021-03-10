@@ -1,5 +1,5 @@
 <template>
-	<view class="">
+	<view class="" id="scrollH">
 		<view style="color: #fff;">消息</view>
 	</view>
 </template>

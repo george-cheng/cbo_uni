@@ -1,10 +1,10 @@
 <template>
 	<view class="changePayPwd mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
-		<view class="changePayPwdArea">
+		<!-- <view class="changePayPwdArea">
 			<view class="phoneAreaIpt">
 				<input class="phoneIpt" type="text" v-model="phone" placeholder="请输入手机号">
 			</view>
-		</view>
+		</view> -->
 		
 		<view class="phonePwdArea">
 			<view class="phonePwdAreaIpt registerIpt">
@@ -152,13 +152,15 @@
 		color: #fa2228;
 		margin-top: 16rpx;
 	}
-	
+	.phonePwdArea{
+		padding: 20rpx 0;
+	}
 	.phonePwdArea, .phoneComPwdArea{
 		position: relative;
 	}
 	.passwordEye{
 		position: absolute;
-		top: 30rpx;
+		top: 48rpx;
 		right: 20rpx;
 	}
 	.passwordEye::before{
@@ -174,7 +176,6 @@
 			}
 		}
 		input{
-			margin: 20rpx 0;
 			border: 1px solid #f2f2f2;
 			height: 85rpx;
 			border-radius: 12rpx;

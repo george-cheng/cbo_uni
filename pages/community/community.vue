@@ -1,10 +1,10 @@
 <template>
-	<view class="community mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="community mainBox" :style="[{height: scrollH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		
 		<view class="communityArea">
 			<view class="communityAreaLft">
 				<view class="communityLine"></view>
-				<view class="communityName" v-for="(item, index) in nameList">
+				<view class="communityName" v-for="(item, index) in nameList" :key="index">
 					<view :class="{choice: choiceOn == index}" @click="choiceNameEvent(item, index)">{{item.name}}</view>
 				</view>
 			</view>
@@ -17,10 +17,10 @@
 		</view>
 		
 		
-		<view class="communityContent">
-			<comCommunity v-if="choiceOn == 0"></comCommunity>
-			<comProject v-if="choiceOn == 1"></comProject>
-			<comNews v-if="choiceOn == 2"></comNews>
+		<view class="communityContent" >
+			<comCommunity id="scrollH" v-if="choiceOn == 0"></comCommunity>
+			<comProject id="scrollH" v-if="choiceOn == 1"></comProject>
+			<comNews id="scrollH" v-if="choiceOn == 2"></comNews>
 		</view>
 		
 		<unitabbar :switchOn = '2'></unitabbar>
@@ -58,6 +58,22 @@
 			},
 			choiceNameEvent(item, index){
 				this.choiceOn = index
+				this.$nextTick(function() {
+					uni.getSystemInfo({
+						success: res => {
+							const query = uni.createSelectorQuery().in(this);
+							query.select('#scrollH').boundingClientRect(data => {
+								this.scrollH = data.height + 48 + 108
+								console.log(this.scrollH)
+								
+								if(this.scrollH < 736){
+									this.scrollH = 736
+								}
+								
+							}).exec();
+						}
+					});
+				});
 			}
 		},
 		created() {
@@ -71,6 +87,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 0 30rpx;
+		padding-top: 88rpx;
 		.communityAreaLft{
 			display: flex;
 			align-items: center;

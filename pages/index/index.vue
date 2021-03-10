@@ -1,67 +1,67 @@
 <template>
-	<view class="home mainBox mainTop" :style="[{height: screenHeight + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="home mainBox " id="scrollH" :style="[{height: scrollH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		
-		<view class="videoPlay" >
-			<video :src="imgUrl + swiper.file" loop objectFit="fill" controls></video>
-		</view>
+			<view class="videoPlay" >
+				<video :src="imgUrl + swiper.file" loop objectFit="fill" controls></video>
+			</view>
 
-		<view class="market">
-			<view v-for="(item, index) in marketList" :key="index">
-				<view class="displayName">{{item.displayName}}</view>
-				<view class="price">{{item.price}}</view>
-				<view class="chg">{{item.chg}}</view>
-				<view class="rateCny">≈{{accMul(item.price, cnyRate)}}CNY</view>
-			</view>
-		</view>
-		
-		<view class="popularizeType">
-			<view class="popularizeTypeLine"></view>
-			<view class="popularizeTypeNavArea">
-				<view class="popularizeTypeNavList" v-for="(item, index) in popularizeType" :key="index" style="color: #fff;">
-					<view class="popularizeTypeNav" :class="{typeNav: index == typeOn}" @click="typeOnEvent(index)">{{item.name}}</view>
+			<view class="market">
+				<view v-for="(item, index) in marketList" :key="index">
+					<view class="displayName">{{item.displayName}}</view>
+					<view class="price">{{item.price}}</view>
+					<view class="chg">{{item.chg}}</view>
+					<view class="rateCny">≈{{accMul(item.price, cnyRate)}}CNY</view>
 				</view>
 			</view>
-		</view>
-		
-		<swiper class="popularizeSwiper" indicator-dots circular @change="swiperChange"  interval="3000" indicator-color="rgb(140,182,253)" indicator-active-color="#999">
-			<swiper-item v-for="(item, index) in popularizeNum" :key="index">
-				<view class="popularizeAreaList" >
-					<view class="popularizeAreaFlex" v-for="(item, index) in PopularizeTypeList" :key="index" @click="popularizeOpenLinkEvent(item)">
-						<view class="popularizeLogo">
-							<image :src="imgUrl + item.logo" mode="aspectFit"></image>
-						</view>
-						<view class="popularizeBase">
-							<image src="../../static/base.png" mode="aspectFit"></image>
-						</view>
-						<view class="popularizeName">{{item.name}}</view>
-					</view>
-					<view class="addPopularize" @click="addPopularizeEvent()">
-						<view class="popularizeLogo">
-							<view class="addPopularizeIcon i-plus"></view>
-						</view>
-						<view class="popularizeBase">
-							<image src="../../static/base.png" mode="aspectFit"></image>
-						</view>
-						<view class="popularizeName">添加</view>
+			
+			<view class="popularizeType">
+				<view class="popularizeTypeLine"></view>
+				<view class="popularizeTypeNavArea">
+					<view class="popularizeTypeNavList" v-for="(item, index) in popularizeType" :key="index" style="color: #fff;">
+						<view class="popularizeTypeNav" :class="{typeNav: index == typeOn}" @click="typeOnEvent(index)">{{item.name}}</view>
 					</view>
 				</view>
-			</swiper-item>
-		</swiper>
-		
-		<uni-popup ref="popup" type="dialog" :mkclick="true">
-			<uni-popup-dialog title="" :isBtn="false" :duration='2000' >
-				<view class="popularizeRule">
-					<rich-text :nodes="popularizeRule"></rich-text>
-					<view class="popularizeSundry">
-						<view class="serviceCheck" @click="serviceChoiceEvent()" :class="[isService?'i-checked':'i-check']"></view>
-						<view class="serviceAreaInfo">
-							<view>我已阅读并同意</view>
-							<view class="serviceAreaTxt" @click="popularizeServiceEvent()">《上传app合同协议》</view>
+			</view>
+			
+			<swiper class="popularizeSwiper" indicator-dots circular @change="swiperChange"  interval="3000" indicator-color="rgb(140,182,253)" indicator-active-color="#999">
+				<swiper-item v-for="(item, index) in popularizeNum" :key="index">
+					<view class="popularizeAreaList" >
+						<view class="popularizeAreaFlex" v-for="(item, index) in PopularizeTypeList" :key="index" @click="popularizeOpenLinkEvent(item)">
+							<view class="popularizeLogo">
+								<image :src="imgUrl + item.logo" mode="aspectFit"></image>
+							</view>
+							<view class="popularizeBase">
+								<image src="../../static/base.png" mode="aspectFit"></image>
+							</view>
+							<view class="popularizeName">{{item.name}}</view>
+						</view>
+						<view class="addPopularize" @click="addPopularizeEvent()">
+							<view class="popularizeLogo">
+								<view class="addPopularizeIcon i-plus"></view>
+							</view>
+							<view class="popularizeBase">
+								<image src="../../static/base.png" mode="aspectFit"></image>
+							</view>
+							<view class="popularizeName">添加</view>
 						</view>
 					</view>
-				</view>
-			</uni-popup-dialog>
-		</uni-popup>
+				</swiper-item>
+			</swiper>
+			
+			<uni-popup ref="popup" type="dialog" :mkclick="true">
+				<uni-popup-dialog title="" :isBtn="false" :duration='2000' >
+					<view class="popularizeRule">
+						<rich-text :nodes="popularizeRule"></rich-text>
+						<view class="popularizeSundry">
+							<view class="serviceCheck" @click="serviceChoiceEvent()" :class="[isService?'i-checked':'i-check']"></view>
+							<view class="serviceAreaInfo">
+								<view>我已阅读并同意</view>
+								<view class="serviceAreaTxt" @click="popularizeServiceEvent()">《上传app合同协议》</view>
+							</view>
+						</view>
+					</view>
+				</uni-popup-dialog>
+			</uni-popup>
 		
 		<unitabbar :switchOn = '0'></unitabbar>
 	</view>
@@ -245,7 +245,7 @@
 	}
 	.videoPlay {
 		width: calc(100% - 60rpx);
-		padding-top: 44rpx;
+		padding-top: 88rpx;
 		height: 314rpx;
 		margin: 0 30rpx;
 		video{

@@ -3,30 +3,35 @@
 		{
 			"path": "pages/index/index",
 			"style": {
+				"enablePullDownRefresh": false,
 				"app-plus": {
-					"titleNView": false
+					"titleNView": false,
+					"bounce": "none"//禁止滚动
 				}
 			}
 		},
 		{
 			"path" : "pages/cochain/cochain",
 			"style" :{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
 			"path" : "pages/community/community",
 			"style" : {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
 			"path": "pages/discover/discover",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
@@ -41,8 +46,8 @@
 			"path" : "pages/loginIn/loginIn",
 			"style" :{
 				"app-plus": {//app平台
-						"bounce": "none"//禁止滚动
-					},
+					"bounce": "none"//禁止滚动
+				},
 				"navigationBarTitleText": "登录",
 				"enablePullDownRefresh": false
 			}

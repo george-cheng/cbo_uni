@@ -1,7 +1,7 @@
 <template>
 	<view class="choiceCity mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="cityArea">
-			<view v-for="(item, index) in citysNameList"  @click="choiceCity(item)">
+			<view v-for="(item, index) in citysNameList" :key="index" @click="choiceCity(item)">
 				<view class="areaLft">{{item.citysName}}</view>
 				<view class="areaRgt">
 					<view class="choiceArea"></view>

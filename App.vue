@@ -29,6 +29,6 @@
 		font-display: block;
 	}
 	page{
-		background-color: #140C1C;
+		// background-color: #140C1C;
 	}
 </style>

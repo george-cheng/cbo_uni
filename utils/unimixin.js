@@ -8,6 +8,7 @@ const unimixin = {
 			paddingTop: 0,
 			screenHeight: 0,
 			screenH: 0,
+			scrollH: '',
 			cnyRate: 6.5,
 			statusBarHeight: '',
 			imgUrl: 'https://cbo-community.oss-cn-hongkong.aliyuncs.com/',
@@ -17,10 +18,23 @@ const unimixin = {
 		uni.getSystemInfo({
 			success: (res) => {
 				this.screenHeight = res.screenHeight
-				this.screenH = res.screenHeight - 60
+				this.screenH = res.screenHeight - 44
 				this.statusBarHeight = res.statusBarHeight
 			}
 		})
+		this.$nextTick(function() {
+			uni.getSystemInfo({
+				success: res => {
+					const query = uni.createSelectorQuery().in(this);
+					if(query){
+						query.select('#scrollH').boundingClientRect(data => {
+							this.scrollH = data.height + 48 + 108
+							console.log(this.scrollH)
+						}).exec();
+					}
+				}
+			});
+		});
 	},
 	methods: {
 		touchStart(e){

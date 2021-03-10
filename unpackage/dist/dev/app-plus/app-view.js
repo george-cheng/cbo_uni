@@ -274,7 +274,7 @@ var render = function() {
     {
       staticClass: _vm._$g(0, "sc"),
       style: _vm._$g(0, "s"),
-      attrs: { _i: 0 },
+      attrs: { id: "scrollH", _i: 0 },
       on: {
         touchstart: function($event) {
           return _vm.$handleViewEvent($event)
@@ -2539,7 +2539,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.addPopularize[data-v-2be84a3c] {\r\n  position: absolute;\r\n  width: 96rpx;\r\n  height: 93rpx;\r\n  margin: 0 auto;\n}\n.addPopularize .i-plus[data-v-2be84a3c] {\r\n  position: absolute;\r\n  right: 0;\r\n  left: 0;\r\n  margin: 0 auto;\n}\n.i-plus[data-v-2be84a3c]::before {\r\n  color: #FF0000;\n}\n.videoPlay[data-v-2be84a3c] {\r\n  width: calc(100% - 60rpx);\r\n  padding-top: 44rpx;\r\n  height: 314rpx;\r\n  margin: 0 30rpx;\n}\n.videoPlay uni-video[data-v-2be84a3c] {\r\n  width: 100%;\r\n  height: 100%;\n}\n.market[data-v-2be84a3c] {\r\n  margin: 14rpx 30rpx 0;\r\n  padding: 25rpx 0;\r\n  background-color: #321b4d;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-justify-content: space-around;\r\n          justify-content: space-around;\r\n  text-align: center;\r\n  font-size: 26rpx;\r\n  line-height: 26rpx;\n}\n.market .displayName[data-v-2be84a3c] {\r\n  color: #ccdaff;\r\n  margin-top: 18rpx;\n}\n.market .price[data-v-2be84a3c] {\r\n  margin-top: 18rpx;\r\n  color: #b8393c;\n}\n.market .chg[data-v-2be84a3c] {\r\n  margin-top: 18rpx;\r\n  color: #3ba987;\n}\n.market .rateCny[data-v-2be84a3c] {\r\n  margin-top: 18rpx;\r\n  color: #999;\n}\n.popularizeType[data-v-2be84a3c] {\r\n  margin: 22rpx 30rpx 0;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.popularizeType .popularizeTypeLine[data-v-2be84a3c] {\r\n  margin-right: 25rpx;\r\n  width: 6rpx;\r\n  height: 30rpx;\r\n  background-color: #8375f0;\n}\n.popularizeType .popularizeTypeNavArea[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  overflow: scroll;\n}\n.popularizeType .popularizeTypeNavArea .popularizeTypeNavList[data-v-2be84a3c] {\r\n  margin-right: 32rpx;\n}\n.popularizeType .popularizeTypeNavArea .popularizeTypeNavList .popularizeTypeNav[data-v-2be84a3c] {\r\n  white-space: nowrap;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n  -webkit-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-flex-wrap: nowrap;\r\n          flex-wrap: nowrap;\n}\n.popularizeType .popularizeTypeNavArea .typeNav[data-v-2be84a3c] {\r\n  color: #fa2228;\r\n  position: relative;\n}\n.popularizeType .popularizeTypeNavArea .typeNav[data-v-2be84a3c]::after {\r\n  position: absolute;\r\n  left: 0;\r\n  bottom: -10rpx;\r\n  content: '';\r\n  width: 100%;\r\n  height: 4rpx;\r\n  background-color: #fa2228;\n}\n.popularizeSwiper[data-v-2be84a3c] {\r\n  margin: 0 50rpx 0;\r\n  height: 600rpx;\n}\n.popularizeSwiper .popularizeAreaList[data-v-2be84a3c] {\r\n  width: 100%;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-flex-wrap: wrap;\r\n          flex-wrap: wrap;\n}\n.popularizeSwiper .popularizeAreaList .popularizeAreaFlex[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-flex-wrap: wrap;\r\n          flex-wrap: wrap;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n  -webkit-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-justify-content: space-around;\r\n          justify-content: space-around;\r\n  text-align: center;\r\n  width: 96rpx;\r\n  height: 112rpx;\r\n  margin: 36rpx 60rpx;\r\n  position: relative;\n}\n.addPopularize[data-v-2be84a3c] {\r\n  position: relative;\r\n  height: 112rpx;\r\n  margin: 26rpx 60rpx 0;\n}\n.popularizeLogo[data-v-2be84a3c] {\r\n  position: absolute;\r\n  left: 0;\r\n  right: 0;\r\n  top: 8rpx;\r\n  width: 36rpx;\r\n  height: 36rpx;\r\n  margin: 0 auto;\n}\n.popularizeLogo uni-image[data-v-2be84a3c] {\r\n  width: 100%;\r\n  height: 100%;\n}\n.popularizeBase[data-v-2be84a3c] {\r\n  position: absolute;\r\n  top: 22rpx;\r\n  width: 96rpx;\r\n  height: 93rpx;\r\n  margin: 0 auto;\n}\n.popularizeBase uni-image[data-v-2be84a3c] {\r\n  width: 100%;\r\n  height: 100%;\n}\n.popularizeName[data-v-2be84a3c] {\r\n  position: absolute;\r\n  top: 125rpx;\r\n  left: 0;\r\n  right: 0;\r\n  width: 96rpx;\r\n  margin: auto;\r\n  font-size: 24rpx;\r\n  color: #ccdaff;\r\n  white-space: nowrap;\r\n  text-align: center;\n}\n.popularizeSundry[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n  -webkit-justify-content: center;\r\n          justify-content: center;\r\n  margin-top: 20rpx;\n}\n.popularizeSundry .serviceCheck[data-v-2be84a3c] {\r\n  margin-right: 5rpx;\n}\n.popularizeSundry .serviceCheck[data-v-2be84a3c]::before {\r\n  color: #d20e0e;\n}\n.popularizeSundry .serviceAreaInfo[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n  -webkit-justify-content: center;\r\n          justify-content: center;\r\n  color: #d20e0e;\r\n  font-size: 24rpx;\n}\n.popularizeSundry .serviceAreaInfo .serviceAreaTxt[data-v-2be84a3c] {\r\n  color: #d20e0e;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.addPopularize[data-v-2be84a3c] {\r\n  position: absolute;\r\n  width: 96rpx;\r\n  height: 93rpx;\r\n  margin: 0 auto;\n}\n.addPopularize .i-plus[data-v-2be84a3c] {\r\n  position: absolute;\r\n  right: 0;\r\n  left: 0;\r\n  margin: 0 auto;\n}\n.i-plus[data-v-2be84a3c]::before {\r\n  color: #FF0000;\n}\n.videoPlay[data-v-2be84a3c] {\r\n  width: calc(100% - 60rpx);\r\n  padding-top: 88rpx;\r\n  height: 314rpx;\r\n  margin: 0 30rpx;\n}\n.videoPlay uni-video[data-v-2be84a3c] {\r\n  width: 100%;\r\n  height: 100%;\n}\n.market[data-v-2be84a3c] {\r\n  margin: 14rpx 30rpx 0;\r\n  padding: 25rpx 0;\r\n  background-color: #321b4d;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-justify-content: space-around;\r\n          justify-content: space-around;\r\n  text-align: center;\r\n  font-size: 26rpx;\r\n  line-height: 26rpx;\n}\n.market .displayName[data-v-2be84a3c] {\r\n  color: #ccdaff;\r\n  margin-top: 18rpx;\n}\n.market .price[data-v-2be84a3c] {\r\n  margin-top: 18rpx;\r\n  color: #b8393c;\n}\n.market .chg[data-v-2be84a3c] {\r\n  margin-top: 18rpx;\r\n  color: #3ba987;\n}\n.market .rateCny[data-v-2be84a3c] {\r\n  margin-top: 18rpx;\r\n  color: #999;\n}\n.popularizeType[data-v-2be84a3c] {\r\n  margin: 22rpx 30rpx 0;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.popularizeType .popularizeTypeLine[data-v-2be84a3c] {\r\n  margin-right: 25rpx;\r\n  width: 6rpx;\r\n  height: 30rpx;\r\n  background-color: #8375f0;\n}\n.popularizeType .popularizeTypeNavArea[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  overflow: scroll;\n}\n.popularizeType .popularizeTypeNavArea .popularizeTypeNavList[data-v-2be84a3c] {\r\n  margin-right: 32rpx;\n}\n.popularizeType .popularizeTypeNavArea .popularizeTypeNavList .popularizeTypeNav[data-v-2be84a3c] {\r\n  white-space: nowrap;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n  -webkit-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-flex-wrap: nowrap;\r\n          flex-wrap: nowrap;\n}\n.popularizeType .popularizeTypeNavArea .typeNav[data-v-2be84a3c] {\r\n  color: #fa2228;\r\n  position: relative;\n}\n.popularizeType .popularizeTypeNavArea .typeNav[data-v-2be84a3c]::after {\r\n  position: absolute;\r\n  left: 0;\r\n  bottom: -10rpx;\r\n  content: '';\r\n  width: 100%;\r\n  height: 4rpx;\r\n  background-color: #fa2228;\n}\n.popularizeSwiper[data-v-2be84a3c] {\r\n  margin: 0 50rpx 0;\r\n  height: 600rpx;\n}\n.popularizeSwiper .popularizeAreaList[data-v-2be84a3c] {\r\n  width: 100%;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-flex-wrap: wrap;\r\n          flex-wrap: wrap;\n}\n.popularizeSwiper .popularizeAreaList .popularizeAreaFlex[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-flex-wrap: wrap;\r\n          flex-wrap: wrap;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n  -webkit-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-justify-content: space-around;\r\n          justify-content: space-around;\r\n  text-align: center;\r\n  width: 96rpx;\r\n  height: 112rpx;\r\n  margin: 36rpx 60rpx;\r\n  position: relative;\n}\n.addPopularize[data-v-2be84a3c] {\r\n  position: relative;\r\n  height: 112rpx;\r\n  margin: 26rpx 60rpx 0;\n}\n.popularizeLogo[data-v-2be84a3c] {\r\n  position: absolute;\r\n  left: 0;\r\n  right: 0;\r\n  top: 8rpx;\r\n  width: 36rpx;\r\n  height: 36rpx;\r\n  margin: 0 auto;\n}\n.popularizeLogo uni-image[data-v-2be84a3c] {\r\n  width: 100%;\r\n  height: 100%;\n}\n.popularizeBase[data-v-2be84a3c] {\r\n  position: absolute;\r\n  top: 22rpx;\r\n  width: 96rpx;\r\n  height: 93rpx;\r\n  margin: 0 auto;\n}\n.popularizeBase uni-image[data-v-2be84a3c] {\r\n  width: 100%;\r\n  height: 100%;\n}\n.popularizeName[data-v-2be84a3c] {\r\n  position: absolute;\r\n  top: 125rpx;\r\n  left: 0;\r\n  right: 0;\r\n  width: 96rpx;\r\n  margin: auto;\r\n  font-size: 24rpx;\r\n  color: #ccdaff;\r\n  white-space: nowrap;\r\n  text-align: center;\n}\n.popularizeSundry[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n  -webkit-justify-content: center;\r\n          justify-content: center;\r\n  margin-top: 20rpx;\n}\n.popularizeSundry .serviceCheck[data-v-2be84a3c] {\r\n  margin-right: 5rpx;\n}\n.popularizeSundry .serviceCheck[data-v-2be84a3c]::before {\r\n  color: #d20e0e;\n}\n.popularizeSundry .serviceAreaInfo[data-v-2be84a3c] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n  -webkit-justify-content: center;\r\n          justify-content: center;\r\n  color: #d20e0e;\r\n  font-size: 24rpx;\n}\n.popularizeSundry .serviceAreaInfo .serviceAreaTxt[data-v-2be84a3c] {\r\n  color: #d20e0e;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2851,10 +2851,14 @@ var render = function() {
         { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
         [
           _vm._$g(11, "i")
-            ? _c("comCommunity", { attrs: { _i: 11 } })
+            ? _c("comCommunity", { attrs: { id: "scrollH", _i: 11 } })
             : _vm._e(),
-          _vm._$g(12, "i") ? _c("comProject", { attrs: { _i: 12 } }) : _vm._e(),
-          _vm._$g(13, "i") ? _c("comNews", { attrs: { _i: 13 } }) : _vm._e()
+          _vm._$g(12, "i")
+            ? _c("comProject", { attrs: { id: "scrollH", _i: 12 } })
+            : _vm._e(),
+          _vm._$g(13, "i")
+            ? _c("comNews", { attrs: { id: "scrollH", _i: 13 } })
+            : _vm._e()
         ],
         1
       ),
@@ -2991,11 +2995,43 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-uni-view",
-    { attrs: { _i: 0 } },
+    { style: _vm._$g(0, "s"), attrs: { _i: 0 } },
     [
-      _c("v-uni-view", { staticStyle: { color: "#fff" }, attrs: { _i: 1 } }, [
-        _vm._v("社区")
-      ])
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 1 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 2 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 3 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 4 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 5 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 6 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 7 } },
+        [_vm._v("社区")]
+      )
     ],
     1
   )
@@ -3251,7 +3287,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-uni-view",
-    { attrs: { _i: 0 } },
+    { attrs: { id: "scrollH", _i: 0 } },
     [
       _c("v-uni-view", { staticStyle: { color: "#fff" }, attrs: { _i: 1 } }, [
         _vm._v("消息")
@@ -3348,7 +3384,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.communityArea[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n  -webkit-justify-content: space-between;\r\n          justify-content: space-between;\r\n  margin: 0 30rpx;\n}\n.communityArea .communityAreaLft[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.communityArea .communityAreaLft .communityLine[data-v-6d28a32a] {\r\n  width: 6rpx;\r\n  height: 30rpx;\r\n  background-color: #8375f0;\r\n  margin-right: 5rpx;\n}\n.communityArea .communityAreaLft .communityName[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\n}\n.communityArea .communityAreaLft .communityName uni-view[data-v-6d28a32a] {\r\n  color: #ccdaff;\r\n  margin-left: 30rpx;\r\n  font-size: 30rpx;\n}\n.communityArea .communityAreaLft .communityName .choice[data-v-6d28a32a] {\r\n  color: #fa2228;\r\n  position: relative;\n}\n.communityArea .communityAreaLft .communityName .choice[data-v-6d28a32a]:after {\r\n  position: absolute;\r\n  left: 0;\r\n  bottom: -10rpx;\r\n  content: '';\r\n  width: 100%;\r\n  height: 4rpx;\r\n  background-color: #fa2228;\n}\n.communityArea .communityAreaRgt[data-v-6d28a32a] {\r\n  width: 310rpx;\r\n  height: 40rpx;\r\n  border-radius: 20rpx;\r\n  border: 1px solid #5867e6;\n}\n.communityArea .communityAreaRgt .searchIpt[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.communityArea .communityAreaRgt .searchIpt .searchIcon[data-v-6d28a32a] {\r\n  margin-left: 20rpx;\r\n  margin-right: 10rpx;\n}\n.communityArea .communityAreaRgt .searchIpt .searchIcon[data-v-6d28a32a]::before {\r\n  color: #E16531;\n}\n.communityArea .communityAreaRgt .searchIpt uni-input[data-v-6d28a32a] {\r\n  width: 100%;\r\n  font-size: 22rpx;\r\n  color: #5665e1;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.communityArea[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n  -webkit-justify-content: space-between;\r\n          justify-content: space-between;\r\n  margin: 0 30rpx;\r\n  padding-top: 88rpx;\n}\n.communityArea .communityAreaLft[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.communityArea .communityAreaLft .communityLine[data-v-6d28a32a] {\r\n  width: 6rpx;\r\n  height: 30rpx;\r\n  background-color: #8375f0;\r\n  margin-right: 5rpx;\n}\n.communityArea .communityAreaLft .communityName[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\n}\n.communityArea .communityAreaLft .communityName uni-view[data-v-6d28a32a] {\r\n  color: #ccdaff;\r\n  margin-left: 30rpx;\r\n  font-size: 30rpx;\n}\n.communityArea .communityAreaLft .communityName .choice[data-v-6d28a32a] {\r\n  color: #fa2228;\r\n  position: relative;\n}\n.communityArea .communityAreaLft .communityName .choice[data-v-6d28a32a]:after {\r\n  position: absolute;\r\n  left: 0;\r\n  bottom: -10rpx;\r\n  content: '';\r\n  width: 100%;\r\n  height: 4rpx;\r\n  background-color: #fa2228;\n}\n.communityArea .communityAreaRgt[data-v-6d28a32a] {\r\n  width: 310rpx;\r\n  height: 40rpx;\r\n  border-radius: 20rpx;\r\n  border: 1px solid #5867e6;\n}\n.communityArea .communityAreaRgt .searchIpt[data-v-6d28a32a] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.communityArea .communityAreaRgt .searchIpt .searchIcon[data-v-6d28a32a] {\r\n  margin-left: 20rpx;\r\n  margin-right: 10rpx;\n}\n.communityArea .communityAreaRgt .searchIpt .searchIcon[data-v-6d28a32a]::before {\r\n  color: #E16531;\n}\n.communityArea .communityAreaRgt .searchIpt uni-input[data-v-6d28a32a] {\r\n  width: 100%;\r\n  font-size: 22rpx;\r\n  color: #5665e1;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -8234,7 +8270,7 @@ var render = function() {
     {
       staticClass: _vm._$g(0, "sc"),
       style: _vm._$g(0, "s"),
-      attrs: { _i: 0 },
+      attrs: { id: "scrollH", _i: 0 },
       on: {
         touchstart: function($event) {
           return _vm.$handleViewEvent($event)
@@ -8257,40 +8293,15 @@ var render = function() {
             { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
             [
               _c("v-uni-input", {
-                staticClass: _vm._$g(3, "sc"),
-                attrs: { type: "text", placeholder: "请输入手机号", _i: 3 },
+                attrs: {
+                  password: _vm._$g(3, "a-password"),
+                  placeholder: "请输入旧密码",
+                  _i: 3
+                },
                 model: {
                   value: _vm._$g(3, "v-model"),
                   callback: function($$v) {
                     _vm.$handleVModelEvent(3, $$v)
-                  },
-                  expression: "phone"
-                }
-              })
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _c(
-        "v-uni-view",
-        { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
-        [
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
-            [
-              _c("v-uni-input", {
-                attrs: {
-                  password: _vm._$g(6, "a-password"),
-                  placeholder: "请输入旧密码",
-                  _i: 6
-                },
-                model: {
-                  value: _vm._$g(6, "v-model"),
-                  callback: function($$v) {
-                    _vm.$handleVModelEvent(6, $$v)
                   },
                   expression: "oldPwd"
                 }
@@ -8299,8 +8310,8 @@ var render = function() {
             1
           ),
           _c("v-uni-view", {
-            staticClass: _vm._$g(7, "sc"),
-            attrs: { _i: 7 },
+            staticClass: _vm._$g(4, "sc"),
+            attrs: { _i: 4 },
             on: {
               click: function($event) {
                 return _vm.$handleViewEvent($event)
@@ -8312,22 +8323,22 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
+        { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
+            { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
             [
               _c("v-uni-input", {
                 attrs: {
-                  password: _vm._$g(10, "a-password"),
+                  password: _vm._$g(7, "a-password"),
                   placeholder: "请设置登录密码",
-                  _i: 10
+                  _i: 7
                 },
                 model: {
-                  value: _vm._$g(10, "v-model"),
+                  value: _vm._$g(7, "v-model"),
                   callback: function($$v) {
-                    _vm.$handleVModelEvent(10, $$v)
+                    _vm.$handleVModelEvent(7, $$v)
                   },
                   expression: "newPwd"
                 }
@@ -8336,8 +8347,8 @@ var render = function() {
             1
           ),
           _c("v-uni-view", {
-            staticClass: _vm._$g(11, "sc"),
-            attrs: { _i: 11 },
+            staticClass: _vm._$g(8, "sc"),
+            attrs: { _i: 8 },
             on: {
               click: function($event) {
                 return _vm.$handleViewEvent($event)
@@ -8346,7 +8357,7 @@ var render = function() {
           }),
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
+            { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
             [_vm._v("提示：8位字符及以上")]
           )
         ],
@@ -8354,22 +8365,22 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
+        { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
+            { staticClass: _vm._$g(11, "sc"), attrs: { _i: 11 } },
             [
               _c("v-uni-input", {
                 attrs: {
-                  password: _vm._$g(15, "a-password"),
+                  password: _vm._$g(12, "a-password"),
                   placeholder: "请确认登录密码",
-                  _i: 15
+                  _i: 12
                 },
                 model: {
-                  value: _vm._$g(15, "v-model"),
+                  value: _vm._$g(12, "v-model"),
                   callback: function($$v) {
-                    _vm.$handleVModelEvent(15, $$v)
+                    _vm.$handleVModelEvent(12, $$v)
                   },
                   expression: "newConPwd"
                 }
@@ -8378,8 +8389,8 @@ var render = function() {
             1
           ),
           _c("v-uni-view", {
-            staticClass: _vm._$g(16, "sc"),
-            attrs: { _i: 16 },
+            staticClass: _vm._$g(13, "sc"),
+            attrs: { _i: 13 },
             on: {
               click: function($event) {
                 return _vm.$handleViewEvent($event)
@@ -8392,8 +8403,8 @@ var render = function() {
       _c(
         "v-uni-view",
         {
-          staticClass: _vm._$g(17, "sc"),
-          attrs: { _i: 17 },
+          staticClass: _vm._$g(14, "sc"),
+          attrs: { _i: 14 },
           on: {
             click: function($event) {
               return _vm.$handleViewEvent($event)
@@ -8494,7 +8505,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.registerTip[data-v-0108206c] {\r\n  font-size: 26rpx;\r\n  color: #fa2228;\r\n  margin-top: 16rpx;\n}\n.phonePwdArea[data-v-0108206c], .phoneComPwdArea[data-v-0108206c] {\r\n  position: relative;\n}\n.passwordEye[data-v-0108206c] {\r\n  position: absolute;\r\n  top: 30rpx;\r\n  right: 20rpx;\n}\n.passwordEye[data-v-0108206c]::before {\r\n  color: #fff;\n}\n.changeLoginPwd[data-v-0108206c] {\r\n  padding: 98rpx 48rpx 0 74rpx;\n}\n.changeLoginPwd .changePwd[data-v-0108206c] {\r\n  padding-top: 48rpx;\n}\n.changeLoginPwd uni-input[data-v-0108206c] {\r\n  margin: 20rpx 0;\r\n  border: 1px solid #f2f2f2;\r\n  height: 85rpx;\r\n  border-radius: 12rpx;\r\n  color: #999;\r\n  padding-left: 10rpx;\n}\n.changePwdBtn[data-v-0108206c] {\r\n  position: absolute;\r\n  bottom: 98rpx;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.registerTip[data-v-0108206c] {\r\n  font-size: 26rpx;\r\n  color: #fa2228;\r\n  margin-top: 16rpx;\n}\n.phonePwdArea[data-v-0108206c] {\r\n  padding: 20rpx 0;\n}\n.phonePwdArea[data-v-0108206c], .phoneComPwdArea[data-v-0108206c] {\r\n  position: relative;\n}\n.passwordEye[data-v-0108206c] {\r\n  position: absolute;\r\n  top: 48rpx;\r\n  right: 20rpx;\n}\n.passwordEye[data-v-0108206c]::before {\r\n  color: #fff;\n}\n.changeLoginPwd[data-v-0108206c] {\r\n  padding: 98rpx 48rpx 0 74rpx;\n}\n.changeLoginPwd .changePwd[data-v-0108206c] {\r\n  padding-top: 48rpx;\n}\n.changeLoginPwd uni-input[data-v-0108206c] {\r\n  border: 1px solid #f2f2f2;\r\n  height: 85rpx;\r\n  border-radius: 12rpx;\r\n  color: #999;\r\n  padding-left: 10rpx;\n}\n.changePwdBtn[data-v-0108206c] {\r\n  position: absolute;\r\n  bottom: 98rpx;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -8922,41 +8933,16 @@ var render = function() {
             { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
             [
               _c("v-uni-input", {
-                staticClass: _vm._$g(3, "sc"),
-                attrs: { type: "text", placeholder: "请输入手机号", _i: 3 },
+                attrs: {
+                  password: _vm._$g(3, "a-password"),
+                  type: "number",
+                  placeholder: "请输入旧支付密码",
+                  _i: 3
+                },
                 model: {
                   value: _vm._$g(3, "v-model"),
                   callback: function($$v) {
                     _vm.$handleVModelEvent(3, $$v)
-                  },
-                  expression: "phone"
-                }
-              })
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _c(
-        "v-uni-view",
-        { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
-        [
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
-            [
-              _c("v-uni-input", {
-                attrs: {
-                  password: _vm._$g(6, "a-password"),
-                  type: "number",
-                  placeholder: "请输入旧支付密码",
-                  _i: 6
-                },
-                model: {
-                  value: _vm._$g(6, "v-model"),
-                  callback: function($$v) {
-                    _vm.$handleVModelEvent(6, $$v)
                   },
                   expression: "oldPayPwd"
                 }
@@ -8965,8 +8951,8 @@ var render = function() {
             1
           ),
           _c("v-uni-view", {
-            staticClass: _vm._$g(7, "sc"),
-            attrs: { _i: 7 },
+            staticClass: _vm._$g(4, "sc"),
+            attrs: { _i: 4 },
             on: {
               click: function($event) {
                 return _vm.$handleViewEvent($event)
@@ -8978,23 +8964,23 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
+        { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
+            { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
             [
               _c("v-uni-input", {
                 attrs: {
-                  password: _vm._$g(10, "a-password"),
+                  password: _vm._$g(7, "a-password"),
                   type: "number",
                   placeholder: "请设置新支付密码",
-                  _i: 10
+                  _i: 7
                 },
                 model: {
-                  value: _vm._$g(10, "v-model"),
+                  value: _vm._$g(7, "v-model"),
                   callback: function($$v) {
-                    _vm.$handleVModelEvent(10, $$v)
+                    _vm.$handleVModelEvent(7, $$v)
                   },
                   expression: "newPayPwd"
                 }
@@ -9003,8 +8989,8 @@ var render = function() {
             1
           ),
           _c("v-uni-view", {
-            staticClass: _vm._$g(11, "sc"),
-            attrs: { _i: 11 },
+            staticClass: _vm._$g(8, "sc"),
+            attrs: { _i: 8 },
             on: {
               click: function($event) {
                 return _vm.$handleViewEvent($event)
@@ -9013,7 +8999,7 @@ var render = function() {
           }),
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
+            { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
             [_vm._v("提示：6位纯数字")]
           )
         ],
@@ -9021,23 +9007,23 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
+        { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
+            { staticClass: _vm._$g(11, "sc"), attrs: { _i: 11 } },
             [
               _c("v-uni-input", {
                 attrs: {
-                  password: _vm._$g(15, "a-password"),
+                  password: _vm._$g(12, "a-password"),
                   type: "number",
                   placeholder: "请确认新支付密码",
-                  _i: 15
+                  _i: 12
                 },
                 model: {
-                  value: _vm._$g(15, "v-model"),
+                  value: _vm._$g(12, "v-model"),
                   callback: function($$v) {
-                    _vm.$handleVModelEvent(15, $$v)
+                    _vm.$handleVModelEvent(12, $$v)
                   },
                   expression: "newConPayPwd"
                 }
@@ -9046,8 +9032,8 @@ var render = function() {
             1
           ),
           _c("v-uni-view", {
-            staticClass: _vm._$g(16, "sc"),
-            attrs: { _i: 16 },
+            staticClass: _vm._$g(13, "sc"),
+            attrs: { _i: 13 },
             on: {
               click: function($event) {
                 return _vm.$handleViewEvent($event)
@@ -9060,8 +9046,8 @@ var render = function() {
       _c(
         "v-uni-view",
         {
-          staticClass: _vm._$g(17, "sc"),
-          attrs: { _i: 17 },
+          staticClass: _vm._$g(14, "sc"),
+          attrs: { _i: 14 },
           on: {
             click: function($event) {
               return _vm.$handleViewEvent($event)
@@ -9162,7 +9148,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.registerTip[data-v-83172c52] {\r\n  font-size: 26rpx;\r\n  color: #fa2228;\r\n  margin-top: 16rpx;\n}\n.phonePwdArea[data-v-83172c52], .phoneComPwdArea[data-v-83172c52] {\r\n  position: relative;\n}\n.passwordEye[data-v-83172c52] {\r\n  position: absolute;\r\n  top: 30rpx;\r\n  right: 20rpx;\n}\n.passwordEye[data-v-83172c52]::before {\r\n  color: #fff;\n}\n.changePayPwd[data-v-83172c52] {\r\n  padding: 0 48rpx 0 74rpx;\n}\n.changePayPwd .changePayPwdArea[data-v-83172c52] {\r\n  padding-top: 48rpx;\n}\n.changePayPwd uni-input[data-v-83172c52] {\r\n  margin: 20rpx 0;\r\n  border: 1px solid #f2f2f2;\r\n  height: 85rpx;\r\n  border-radius: 12rpx;\r\n  color: #999;\r\n  padding-left: 10rpx;\n}\n.changePayPwdBtn[data-v-83172c52] {\r\n  position: absolute;\r\n  bottom: 98rpx;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.registerTip[data-v-83172c52] {\r\n  font-size: 26rpx;\r\n  color: #fa2228;\r\n  margin-top: 16rpx;\n}\n.phonePwdArea[data-v-83172c52] {\r\n  padding: 20rpx 0;\n}\n.phonePwdArea[data-v-83172c52], .phoneComPwdArea[data-v-83172c52] {\r\n  position: relative;\n}\n.passwordEye[data-v-83172c52] {\r\n  position: absolute;\r\n  top: 48rpx;\r\n  right: 20rpx;\n}\n.passwordEye[data-v-83172c52]::before {\r\n  color: #fff;\n}\n.changePayPwd[data-v-83172c52] {\r\n  padding: 0 48rpx 0 74rpx;\n}\n.changePayPwd .changePayPwdArea[data-v-83172c52] {\r\n  padding-top: 48rpx;\n}\n.changePayPwd uni-input[data-v-83172c52] {\r\n  border: 1px solid #f2f2f2;\r\n  height: 85rpx;\r\n  border-radius: 12rpx;\r\n  color: #999;\r\n  padding-left: 10rpx;\n}\n.changePayPwdBtn[data-v-83172c52] {\r\n  position: absolute;\r\n  bottom: 98rpx;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -10140,11 +10126,43 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-uni-view",
-    { attrs: { _i: 0 } },
+    { style: _vm._$g(0, "s"), attrs: { _i: 0 } },
     [
-      _c("v-uni-view", { staticStyle: { color: "#fff" }, attrs: { _i: 1 } }, [
-        _vm._v("社区")
-      ])
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 1 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 2 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 3 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 4 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 5 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 6 } },
+        [_vm._v("社区")]
+      ),
+      _c(
+        "v-uni-view",
+        { staticStyle: { color: "#fff", height: "200rpx" }, attrs: { _i: 7 } },
+        [_vm._v("社区")]
+      )
     ],
     1
   )
@@ -10400,7 +10418,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-uni-view",
-    { attrs: { _i: 0 } },
+    { attrs: { id: "scrollH", _i: 0 } },
     [
       _c("v-uni-view", { staticStyle: { color: "#fff" }, attrs: { _i: 1 } }, [
         _vm._v("消息")
@@ -10507,7 +10525,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_
 var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
 var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___, { hash: "#icomoon" });
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\r\n/*每个页面公共css */\r\n/* 全局公共scss */\n.mainBox{\n}\n.mainTop{\r\n\tpadding-top: 88rpx;\n}\n.uniBtn{\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tmargin: auto;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\r\n\twidth: 600rpx;\r\n\theight: 80rpx;\r\n\tcolor: #fff;\r\n\tborder-radius: 6rpx;\r\n\tbackground-color: #FA2228;\n}\nuni-input{\n}\n.hideClass{\r\n\topacity: 0;\n}\n[class^=\"icon-\"], [class*=\" icon-\"] {\r\n  /* use !important to prevent issues with browser extensions that change fonts */\r\n  font-family: 'icomoon' !important;\r\n  speak: never;\r\n  font-style: normal;\r\n  font-weight: normal;\r\n  font-variant: normal;\r\n  text-transform: none;\r\n  line-height: 1;\r\n\r\n  /* Better Font Rendering =========== */\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n.icon-uniE912:before {\r\n  content: \"\\e912\";\r\n  color: #fff;\n}\n.icon-uniE907:before {\r\n  content: \"\\e907\";\r\n  color: #fff;\n}\n.icon-3:before {\r\n  content: \"\\e908\";\r\n  color: #fff;\n}\n.icon-5:before {\r\n  content: \"\\e909\";\r\n  color: #fff;\n}\n.icon-6:before {\r\n  content: \"\\e90a\";\r\n  color: #fff;\n}\n.icon-7:before {\r\n  content: \"\\e90b\";\r\n  color: #fff;\n}\n.icon-8:before {\r\n  content: \"\\e90c\";\r\n  color: #fff;\n}\n.icon-9:before {\r\n  content: \"\\e90d\";\r\n  color: #fff;\n}\n.icon-10:before {\r\n  content: \"\\e90e\";\r\n  color: #fff;\n}\n.icon-11:before {\r\n  content: \"\\e90f\";\r\n  color: #fff;\n}\n.icon-12:before {\r\n  content: \"\\e910\";\r\n  color: #fff;\n}\n.icon-13:before {\r\n  content: \"\\e911\";\r\n  color: #fff;\n}\n.icon-uniE905:before {\r\n  content: \"\\e905\";\r\n  color: #fff;\n}\n.icon-1:before {\r\n  content: \"\\e906\";\r\n  color: #fff;\n}\n.icon-uniE903:before {\r\n  content: \"\\e903\";\r\n  color: #fff;\n}\n.icon-4:before {\r\n  content: \"\\e902\";\r\n  color: #fff;\n}\n.icon-2:before {\r\n  content: \"\\e904\";\r\n  color: #fff;\n}\n.icon--1:before {\r\n  content: \"\\e900\";\r\n  color: #fff;\n}\n.icon--2:before {\r\n  content: \"\\e901\";\r\n  color: #fff;\n}\n@charset \"utf-8\";\r\n/* 左箭头 */\n.i-lftArrow::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e900\";\n}\r\n/* 右箭头 */\n.i-rgtArrow::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e901\";\n}\r\n/* 警告 */\n.i-warn::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e902\";\n}\r\n/* 下实箭头 */\n.i-downArrow::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e904\";\n}\r\n/* 眼睛 */\n.i-eye::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e905\";\n}\r\n/* 未选中 */\n.i-check::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e903\";\n}\r\n/* 已选中 */\n.i-checked::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e906\";\n}\r\n/* 安全 */\n.i-save::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e907\";\n}\r\n/* 添加 */\n.i-plus::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90e\";\n}\r\n/* 分享收益 */\n.i-shareprofit::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e908\";\n}\r\n/* 复制 */\n.i-copy::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e909\";\n}\r\n/* 个人资料 */\n.i-personal::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90a\";\n}\r\n/* 客服 */\n.i-service::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90b\";\n}\r\n/* 我的资产 */\n.i-myassets::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90c\";\n}\r\n/* 系统 */\n.i-system::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90d\";\n}\r\n/* 推广 */\n.i-extension::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e910\";\n}\r\n/* 邀请好友 */\n.i-invita::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e911\";\n}\r\n/* 团队 */\n.i-team::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90f\";\n}\r\n/* 对号 */\n.i-checksign::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e912\";\n}\n@font-face {\r\n  font-family: 'icomoon';\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"embedded-opentype\"), url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"truetype\"), url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"woff\"), url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"svg\");\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-display: block;\n}\nbody {\r\n  background-color: #140C1C;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\r\n/*每个页面公共css */\r\n/* 全局公共scss */\n.mainArea{\r\n\tbackground-color: #140C1C;\n}\n.mainBox{\r\n\tbackground-color: #140c1c;\n}\n.mainTop{\r\n\tpadding-top: 88rpx;\n}\n.uniBtn{\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tmargin: auto;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\r\n\twidth: 600rpx;\r\n\theight: 80rpx;\r\n\tcolor: #fff;\r\n\tborder-radius: 6rpx;\r\n\tbackground-color: #FA2228;\n}\nuni-input{\n}\n.hideClass{\r\n\topacity: 0;\n}\n[class^=\"icon-\"], [class*=\" icon-\"] {\r\n  /* use !important to prevent issues with browser extensions that change fonts */\r\n  font-family: 'icomoon' !important;\r\n  speak: never;\r\n  font-style: normal;\r\n  font-weight: normal;\r\n  font-variant: normal;\r\n  text-transform: none;\r\n  line-height: 1;\r\n\r\n  /* Better Font Rendering =========== */\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\n}\n.icon-uniE912:before {\r\n  content: \"\\e912\";\r\n  color: #fff;\n}\n.icon-uniE907:before {\r\n  content: \"\\e907\";\r\n  color: #fff;\n}\n.icon-3:before {\r\n  content: \"\\e908\";\r\n  color: #fff;\n}\n.icon-5:before {\r\n  content: \"\\e909\";\r\n  color: #fff;\n}\n.icon-6:before {\r\n  content: \"\\e90a\";\r\n  color: #fff;\n}\n.icon-7:before {\r\n  content: \"\\e90b\";\r\n  color: #fff;\n}\n.icon-8:before {\r\n  content: \"\\e90c\";\r\n  color: #fff;\n}\n.icon-9:before {\r\n  content: \"\\e90d\";\r\n  color: #fff;\n}\n.icon-10:before {\r\n  content: \"\\e90e\";\r\n  color: #fff;\n}\n.icon-11:before {\r\n  content: \"\\e90f\";\r\n  color: #fff;\n}\n.icon-12:before {\r\n  content: \"\\e910\";\r\n  color: #fff;\n}\n.icon-13:before {\r\n  content: \"\\e911\";\r\n  color: #fff;\n}\n.icon-uniE905:before {\r\n  content: \"\\e905\";\r\n  color: #fff;\n}\n.icon-1:before {\r\n  content: \"\\e906\";\r\n  color: #fff;\n}\n.icon-uniE903:before {\r\n  content: \"\\e903\";\r\n  color: #fff;\n}\n.icon-4:before {\r\n  content: \"\\e902\";\r\n  color: #fff;\n}\n.icon-2:before {\r\n  content: \"\\e904\";\r\n  color: #fff;\n}\n.icon--1:before {\r\n  content: \"\\e900\";\r\n  color: #fff;\n}\n.icon--2:before {\r\n  content: \"\\e901\";\r\n  color: #fff;\n}\n@charset \"utf-8\";\r\n/* 左箭头 */\n.i-lftArrow::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e900\";\n}\r\n/* 右箭头 */\n.i-rgtArrow::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e901\";\n}\r\n/* 警告 */\n.i-warn::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e902\";\n}\r\n/* 下实箭头 */\n.i-downArrow::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e904\";\n}\r\n/* 眼睛 */\n.i-eye::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e905\";\n}\r\n/* 未选中 */\n.i-check::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e903\";\n}\r\n/* 已选中 */\n.i-checked::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e906\";\n}\r\n/* 安全 */\n.i-save::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e907\";\n}\r\n/* 添加 */\n.i-plus::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90e\";\n}\r\n/* 分享收益 */\n.i-shareprofit::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e908\";\n}\r\n/* 复制 */\n.i-copy::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e909\";\n}\r\n/* 个人资料 */\n.i-personal::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90a\";\n}\r\n/* 客服 */\n.i-service::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90b\";\n}\r\n/* 我的资产 */\n.i-myassets::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90c\";\n}\r\n/* 系统 */\n.i-system::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90d\";\n}\r\n/* 推广 */\n.i-extension::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e910\";\n}\r\n/* 邀请好友 */\n.i-invita::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e911\";\n}\r\n/* 团队 */\n.i-team::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e90f\";\n}\r\n/* 对号 */\n.i-checksign::before{\r\n\tfont-family: 'icomoon' !important;\r\n\tcontent: \"\\e912\";\n}\n@font-face {\r\n  font-family: 'icomoon';\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"embedded-opentype\"), url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"truetype\"), url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"woff\"), url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"svg\");\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-display: block;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
