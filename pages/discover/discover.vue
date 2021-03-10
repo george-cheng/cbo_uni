@@ -1,5 +1,5 @@
 <template>
-	<view class="">
+	<view class="discover mainBox" id="scrollH" :style="[{height: scrollH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		
 		<unitabbar :switchOn = '3'></unitabbar>
 	</view>
@@ -20,6 +20,11 @@
 
 		},
 		methods: {
+			touchEnd(e){
+				if(this.changeY > 50){
+					this.paddingTop = 0
+				}
+			},
 
 		},
 		created() {

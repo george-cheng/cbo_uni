@@ -16,7 +16,6 @@
 			</view>
 		</view>
 		
-		
 		<view class="communityContent" >
 			<comCommunity id="scrollH" v-if="choiceOn == 0"></comCommunity>
 			<comProject id="scrollH" v-if="choiceOn == 1"></comProject>
@@ -30,6 +29,7 @@
 <script>
 	import unitabbar from '../../components/uni-tabbar/tabBar.vue'
 	import { unimixin } from '../../utils/unimixin.js'
+	import { accAdd, accMul } from '../../utils/common.js'
 	
 	import comCommunity from './comCommunity.vue'
 	import comProject from './comProject.vue'
@@ -47,8 +47,8 @@
 				search: '',
 			}
 		},
-		onLoad() {
-
+		onLoad(options) {
+			this.choiceOn = options.category - 1
 		},
 		methods: {
 			touchEnd(e){

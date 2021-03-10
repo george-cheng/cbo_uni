@@ -450,6 +450,27 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path" : "pages/community/addCommunity/addComCommunity",
+			"style" :{
+				"navigationBarTitleText": "社区添加",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#999",
+								"colorPressed": "#999",
+								"float": "left",
+								"fontSize": "30rpx",
+								"fontSrc": "/static/iconfont/fonts/icomoon.ttf", // 字体文件
+								"text": "\ue900" // 字体图标\u 开头，加上字体图标unicode后面四位
+							}
+						]
+					}
+				}
+			}
 		}
 	],
 	"globalStyle": {

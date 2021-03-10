@@ -18,29 +18,32 @@ const unimixin = {
 		}
 	},
 	onLoad(){
-		
 		this.$nextTick(()=> {
 			this.calcHeight()
 		});
+	},
+	onReachBottom(){
+		console.log(1)
 	},
 	methods: {
 		calcHeight(){
 			uni.getSystemInfo({
 				success: (res) => {
-					console.log(res)
 					this.screenHeight = res.screenHeight
 					this.windowTop = res.windowTop || res.statusBarHeight
 					this.screenH = res.screenHeight - this.windowTop
 					this.windowHeight = res.windowHeight
 				}
 			})
+			
+			// screenHt 顶部状态栏 + 页面主体部分
+			// scrollH 页面主体 + 底部导航栏
 			uni.getSystemInfo({
 				success: res => {
 					const query = uni.createSelectorQuery().in(this);
 					if(query){
 						query.select('#scrollH').boundingClientRect(data => {
 							this.scrollH = data.height + 48 + 108
-							console.log(this.scrollH)
 							this.scrollHeight = data.height 
 							if(this.scrollH < this.screenHeight){
 								this.scrollH = this.screenHeight - this.windowTop
