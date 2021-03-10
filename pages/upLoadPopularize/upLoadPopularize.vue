@@ -1,5 +1,5 @@
 <template>
-	<view class="upLoadPopularize mainBox mainTop" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="upLoadPopularize mainBox mainTop" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="upImg">
 			<view class="upImgArea" @click="chooseUpLoadImg()" v-if="isUpload">上传图片</view>
 			<image class="upLoadChoose" v-if="!isUpload" :src="showImg" mode="aspectFit"></image>

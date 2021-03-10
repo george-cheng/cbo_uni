@@ -1,5 +1,5 @@
 <template>
-	<view class="register mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="register mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="registerTit">
 			<view class="phoneRetister">手机注册</view>
 			<view class="registerCountry">

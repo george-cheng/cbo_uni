@@ -1,5 +1,5 @@
 <template>
-	<view class="setPayPwd mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="setPayPwd mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="setPayPwdArea">
 			<view class="phoneAreaIpt">
 				<input class="phoneIpt" type="text" v-model="phone" placeholder="请输入手机号">

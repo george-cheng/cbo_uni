@@ -1,5 +1,5 @@
 <template>
-	<view class="system mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="system mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="systemArea">
 			<view  @click="clearStroageEvent()">
 				<view class="areaLft">清理缓存</view>

@@ -6,23 +6,34 @@ const unimixin = {
 			page: '',
 			limit: '',
 			paddingTop: 0,
+			screenH: '',
 			screenHeight: 0,
-			screenH: 0,
 			scrollH: '',
+			screenHt: '',
+			scrollHeight: '',
+			windowHeight: '',
 			cnyRate: 6.5,
-			statusBarHeight: '',
+			windowTop: '',
 			imgUrl: 'https://cbo-community.oss-cn-hongkong.aliyuncs.com/',
 		}
 	},
 	onLoad(){
-		uni.getSystemInfo({
-			success: (res) => {
-				this.screenHeight = res.screenHeight
-				this.screenH = res.screenHeight - 44
-				this.statusBarHeight = res.statusBarHeight
-			}
-		})
-		this.$nextTick(function() {
+		
+		this.$nextTick(()=> {
+			this.calcHeight()
+		});
+	},
+	methods: {
+		calcHeight(){
+			uni.getSystemInfo({
+				success: (res) => {
+					console.log(res)
+					this.screenHeight = res.screenHeight
+					this.windowTop = res.windowTop || res.statusBarHeight
+					this.screenH = res.screenHeight - this.windowTop
+					this.windowHeight = res.windowHeight
+				}
+			})
 			uni.getSystemInfo({
 				success: res => {
 					const query = uni.createSelectorQuery().in(this);
@@ -30,13 +41,18 @@ const unimixin = {
 						query.select('#scrollH').boundingClientRect(data => {
 							this.scrollH = data.height + 48 + 108
 							console.log(this.scrollH)
+							this.scrollHeight = data.height 
+							if(this.scrollH < this.screenHeight){
+								this.scrollH = this.screenHeight - this.windowTop
+							}
+							if(this.scrollHeight < this.screenHeight){
+								this.screenHt = this.windowHeight
+							}
 						}).exec();
 					}
 				}
 			});
-		});
-	},
-	methods: {
+		},
 		touchStart(e){
 			this.startY = e.touches[0].pageY
 			this.changeY = 0

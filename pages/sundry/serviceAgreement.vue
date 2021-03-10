@@ -1,5 +1,5 @@
 <template>
-	<view class="service mainBox">
+	<view class="service mainBox" id="scrollH" :style="[{height: screenHt + 'px'}]">
 			<view class="serviceTit">服务协议</view>
 			<view class="serviceCon">
 				<view class="s_title">DPRO特别声明</view>
@@ -88,7 +88,9 @@ DPRO将在DPRO站公布并不定时修订隐私权政策，隐私权政策构成
 </template>
 
 <script>
+	import { unimixin } from '../../utils/unimixin.js'
 	export default {
+		mixins: [ unimixin ],
 		data(){
 			return{
 				
@@ -120,7 +122,7 @@ DPRO将在DPRO站公布并不定时修订隐私权政策，隐私权政策构成
 			// background-color: #fff;
 			color: #fff;
 			padding: 0 20rpx;
-			margin: 30rpx 0;
+			padding: 30rpx 0;
 			font-size: 26rpx;
 		}
 		.serviceCon{

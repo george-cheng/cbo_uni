@@ -1,5 +1,5 @@
 <template>
-	<view class="loginIn mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="loginIn mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]">
 		<view class="loginLogo">
 			<image src="../../static/logo.jpg" mode="aspectFit"></image>
 		</view>

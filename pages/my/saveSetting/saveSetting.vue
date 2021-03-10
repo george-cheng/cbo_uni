@@ -1,5 +1,5 @@
 <template>
-	<view class="saveSetting mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="saveSetting mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="saveSettingArea">
 			<view @click="saveSettingEvent(1)">
 				<view class="areaLft">修改登录密码</view>

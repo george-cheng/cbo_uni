@@ -1,5 +1,5 @@
 <template>
-	<view class="my mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="my mainBox" id="scrollH" :style="[{height: scrollH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		
 		<view class="myArea">
 			<view class="myPerson">

@@ -1,5 +1,5 @@
 <template>
-	<view class="changeLoginPwd mainBox" id="scrollH" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="changeLoginPwd mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<!-- <view class="changePwd">
 			<view class="phoneAreaIpt">
 				<input class="phoneIpt" type="text" v-model="phone" placeholder="请输入手机号">

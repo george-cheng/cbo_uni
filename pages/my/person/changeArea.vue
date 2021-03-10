@@ -1,5 +1,5 @@
 <template>
-	<view class="changeArea mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="changeArea mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="getLocation">
 			<view class="locationTit">当前位置</view>
 			<view class="locationArea" v-if="!location">

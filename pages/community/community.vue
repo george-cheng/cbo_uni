@@ -58,22 +58,9 @@
 			},
 			choiceNameEvent(item, index){
 				this.choiceOn = index
-				this.$nextTick(function() {
-					uni.getSystemInfo({
-						success: res => {
-							const query = uni.createSelectorQuery().in(this);
-							query.select('#scrollH').boundingClientRect(data => {
-								this.scrollH = data.height + 48 + 108
-								console.log(this.scrollH)
-								
-								if(this.scrollH < 736){
-									this.scrollH = 736
-								}
-								
-							}).exec();
-						}
-					});
-				});
+				setTimeout(()=>{
+					this.calcHeight()
+				},500)
 			}
 		},
 		created() {

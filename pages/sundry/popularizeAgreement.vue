@@ -5,7 +5,9 @@
 </template>
 
 <script>
+	import { unimixin } from '../../utils/unimixin.js'
 	export default {
+		mixins: [ unimixin ],
 		data(){
 			return{
 				

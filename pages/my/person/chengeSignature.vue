@@ -1,5 +1,5 @@
 <template>
-	<view class="changeSignture mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="changeSignture mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="saveBtn">
 			<view></view>
 			<view class="saveBtnTxt" @click="saveEvent()">保存</view>
@@ -18,7 +18,7 @@
 		mixins: [ unimixin ],
 		data(){
 			return{
-				signature: '设置个性签名签名签名设置个性签名签名签名设置个性签名签名签名设置个性签名签名签名设置个性签名签名签名'
+				signature: ''
 			}
 		},
 		onLoad() {
@@ -77,7 +77,7 @@
 <style scoped lang="scss">
 	.changeSignture{
 		padding-top: 28rpx;
-		margin: 0 30rpx;
+		padding: 0 30rpx;
 	}
 	.saveBtn{
 		display: flex;

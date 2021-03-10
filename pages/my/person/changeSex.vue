@@ -1,5 +1,5 @@
 <template>
-	<view class="changeSex mainBox" :style="[{height: screenH + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+	<view class="changeSex mainBox" id="scrollH" :style="[{height: screenHt + 'px'},{ paddingTop: paddingTop + 'rpx'}]" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
 		<view class="saveBtn">
 			<view></view>
 			<view class="saveBtnTxt" @click="saveEvent()">保存</view>
@@ -89,7 +89,7 @@
 <style scoped lang="scss">
 	.changeSex{
 		padding-top: 28rpx;
-		margin: 0 30rpx;
+		padding: 0 30rpx;
 	}
 	.saveBtn{
 		display: flex;
