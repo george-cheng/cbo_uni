@@ -57,6 +57,7 @@
 		methods: {
 			touchEnd(e){
 				if(this.changeY > 50){
+					this.getUserInfo()
 					this.paddingTop = 0
 				}
 			},
@@ -137,5 +138,6 @@
 	
 	.areaRgtArrow:before{
 		color: #ccdaff;
+		font-size: 24rpx;
 	}
 </style>

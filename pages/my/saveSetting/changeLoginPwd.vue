@@ -130,7 +130,7 @@
 			},
 			newPwdEvent(){
 				if(this.newPwd){
-					this.isNewPwd = !this.newPwd
+					this.isNewPwd = !this.isNewPwd
 				}
 			},
 			newComPwdEvent(){

@@ -30,7 +30,6 @@
 				</view>
 			</uni-popup-dialog>
 		</uni-popup>
-		
 	</view>
 </template>
 
@@ -48,7 +47,7 @@
 			return{
 				areaCode: '86',
 				phone: '17621722875',
-				loginPwd: '123456789a',
+				loginPwd: 'a123456789',
 				validCode: '',
 				Authorization: '',
 				isPassword: true,

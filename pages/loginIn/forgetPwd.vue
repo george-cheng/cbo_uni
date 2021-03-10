@@ -39,11 +39,11 @@
 		data(){
 			return{
 				areaCode: '86',
-				phone: '17621722875',
-				validCode: '776301',
+				phone: '',
+				validCode: '',
 				validTxt: '获取验证码',
-				loginPwd: 'aa123456789',
-				loginComPwd: 'aa123456789',
+				loginPwd: '',
+				loginComPwd: '',
 				isPassword: true,
 				isComPassword: true,
 				isFlag: true,
@@ -127,7 +127,6 @@
 				}
 			},
 			sendValidEvent(){
-				console.log(12)
 				this.ajaxJson({
 					url: '/summary/sendMsg/forgetLoginPwd',
 					data: { areaCode: this.areaCode, phone: this.phone},

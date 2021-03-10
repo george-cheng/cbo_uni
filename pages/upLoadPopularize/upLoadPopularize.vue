@@ -154,13 +154,11 @@
 					data: params,
 					method: 'POST',
 					call: (data)=>{
-						if(data.code == 200){
-							uni.showToast({
-								icon: 'none',
-								title: data.message,
-								success: () => {}
-							})
-						}
+						uni.showToast({
+							icon: 'none',
+							title: data.message,
+							success: () => {}
+						})
 						setTimeout(()=>{
 							uni.reLaunch({
 								url: '/pages/index/index',

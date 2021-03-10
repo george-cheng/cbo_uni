@@ -75,7 +75,6 @@
 					key: 'userInfo',
 					success: (res) => {
 						this.userInfo = res.data
-						console.log(this.userInfo)
 						this.sexIndex = this.userInfo.sex
 					}
 				})

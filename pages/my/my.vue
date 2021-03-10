@@ -59,7 +59,7 @@
 					{id: 6, icon: 'i-save', name: '安全设置', url: '/pages/my/saveSetting/saveSetting'},
 					{id: 7, icon: 'i-extension', name: '推广记录'},
 					{id: 8, icon: 'i-service', name: '在线客服'},
-					{id: 9, icon: 'i-system', name: '系统'},
+					{id: 9, icon: 'i-system', name: '系统', url: '/pages/my/system/system'},
 				]
 			}
 		},

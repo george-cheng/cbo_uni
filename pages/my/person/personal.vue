@@ -175,7 +175,6 @@
 		padding-top: 42rpx;
 	}
 	.personalArea>view:nth-child(1){
-		height: 130rpx;
 		border-bottom: none;
 	}
 	.personalArea>view:last-child{
@@ -219,6 +218,7 @@
 				}
 				.areaRgtArrow:before{
 					color: #ccdaff;
+					font-size: 24rpx;
 				}
 			}
 		}
